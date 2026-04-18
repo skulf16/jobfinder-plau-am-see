@@ -131,25 +131,25 @@ export const companies: CompanyWithContact[] = [
         "id": "s_0",
         "titel": "Finanzen / Versicherungen",
         "beschreibung": "",
-        "anstellungsart": "Boys & Girlsday"
+        "anstellungsart": "Festanstellung"
       },
       {
         "id": "s_1",
         "titel": "Kundenberatung",
         "beschreibung": "",
-        "anstellungsart": "Boys & Girlsday"
+        "anstellungsart": "Festanstellung"
       },
       {
         "id": "s_2",
         "titel": "Vertrieb / Sales",
         "beschreibung": "",
-        "anstellungsart": "Boys & Girlsday"
+        "anstellungsart": "Festanstellung"
       },
       {
         "id": "s_3",
         "titel": "Büro / Organisation",
         "beschreibung": "",
-        "anstellungsart": "Boys & Girlsday"
+        "anstellungsart": "Festanstellung"
       }
     ],
     "benefits": [
@@ -660,7 +660,7 @@ export const companies: CompanyWithContact[] = [
         "id": "s_0",
         "titel": "Pflege",
         "beschreibung": "",
-        "anstellungsart": "Boys & Girlsday"
+        "anstellungsart": "Festanstellung"
       }
     ],
     "benefits": [
@@ -1368,7 +1368,7 @@ export const companies: CompanyWithContact[] = [
         "id": "s_0",
         "titel": "Pavillon",
         "beschreibung": "",
-        "anstellungsart": "Boys & Girlsday"
+        "anstellungsart": "Festanstellung"
       }
     ],
     "benefits": [],
