@@ -8,7 +8,7 @@ export const companies: CompanyWithContact[] = [
   {
     "id": "1",
     "name": "Volutus GmbH/ Chandyshop/ Biergarten",
-    "branche": "Handel & Vertrieb",
+    "branche": "Hotel & Gastronomie",
     "initialen": "VC",
     "adresse": "Plau am See",
     "telefon": "+49 1522 3105755",
@@ -119,36 +119,45 @@ export const companies: CompanyWithContact[] = [
     "bewerbungslink": "",
     "ansprechpartner": "Katharina Krause",
     "anstellungsarten": [
-      "Ausbildung",
-      "Boys & Girls Day",
+      "Boys & Girlsday",
       "Festanstellung",
-      "Praxislerntag"
+      "Praxislerntag",
+      "Minijob",
+      "Teilzeit",
+      "Vollzeit"
     ],
     "stellenangebote": [
       {
         "id": "s_0",
-        "titel": "Finanzdienstleistungen (Versicherungen",
+        "titel": "Finanzen / Versicherungen",
         "beschreibung": "",
-        "anstellungsart": "Ausbildung"
+        "anstellungsart": "Boys & Girlsday"
       },
       {
         "id": "s_1",
-        "titel": "Finanzierungen",
+        "titel": "Kundenberatung",
         "beschreibung": "",
-        "anstellungsart": "Ausbildung"
+        "anstellungsart": "Boys & Girlsday"
       },
       {
         "id": "s_2",
-        "titel": "Geldanlagen)",
+        "titel": "Vertrieb / Sales",
         "beschreibung": "",
-        "anstellungsart": "Ausbildung"
+        "anstellungsart": "Boys & Girlsday"
+      },
+      {
+        "id": "s_3",
+        "titel": "Büro / Organisation",
+        "beschreibung": "",
+        "anstellungsart": "Boys & Girlsday"
       }
     ],
     "benefits": [
-      "Flexible Arbeitszeiten / Gleitzeit",
-      "Homeoffice-Optionen"
+      "Bonus / Erfolgsprämien",
+      "Mitarbeiter-Rabatte",
+      "Weiterbildungsbudget"
     ],
-    "schnuppertage": false,
+    "schnuppertage": true,
     "aktiv": true
   },
   {
@@ -171,7 +180,7 @@ export const companies: CompanyWithContact[] = [
   {
     "id": "6",
     "name": "Bauservice & Transporte Tschiersch-Seehafer",
-    "branche": "Handwerk & Bau",
+    "branche": "Transport & Logistik",
     "initialen": "BT",
     "adresse": "Plau am See",
     "telefon": "+49 1520 2302788",
@@ -233,7 +242,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Yvonne Kuhring",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girls Day",
+      "Boys & Girlsday",
       "Festanstellung",
       "Praktikum"
     ],
@@ -322,7 +331,7 @@ export const companies: CompanyWithContact[] = [
   {
     "id": "11",
     "name": "Ferienpark Heidenholz & Aparthotel „Am See“",
-    "branche": "Handwerk & Bau",
+    "branche": "Hotel & Gastronomie",
     "initialen": "FH",
     "adresse": "Plau am See",
     "telefon": "+49 38735 850",
@@ -332,7 +341,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Timo Weisbrich",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girls Day",
+      "Boys & Girlsday",
       "Duales Studium",
       "Ferienjob",
       "Festanstellung",
@@ -397,7 +406,7 @@ export const companies: CompanyWithContact[] = [
   {
     "id": "13",
     "name": "Ganzlin Beschichtungspulver GmbH",
-    "branche": "Öffentlicher Dienst",
+    "branche": "Industrie & Produktion",
     "initialen": "GB",
     "adresse": "Plau am See",
     "telefon": "+49 38737 3030",
@@ -550,7 +559,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Steffen Steinhäuser",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girls Day",
+      "Boys & Girlsday",
       "Festanstellung",
       "Praxislerntag"
     ],
@@ -592,7 +601,7 @@ export const companies: CompanyWithContact[] = [
   {
     "id": "17",
     "name": "Stadt Plau am See",
-    "branche": "Bildung & Soziales",
+    "branche": "Öffentlicher Dienst",
     "initialen": "SP",
     "adresse": "Plau am See",
     "telefon": "+49 38735 49415",
@@ -658,7 +667,7 @@ export const companies: CompanyWithContact[] = [
     "bewerbungslink": "",
     "ansprechpartner": "Claudia Poser",
     "anstellungsarten": [
-      "Boys & Girls Day",
+      "Boys & Girlsday",
       "Festanstellung",
       "Praktikum",
       "Praxislerntag"
@@ -668,7 +677,7 @@ export const companies: CompanyWithContact[] = [
         "id": "s_0",
         "titel": "Pflege",
         "beschreibung": "",
-        "anstellungsart": "Boys & Girls Day"
+        "anstellungsart": "Boys & Girlsday"
       }
     ],
     "benefits": [
@@ -725,7 +734,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Carmen Schuldt",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girls Day",
+      "Boys & Girlsday",
       "Ferienjob",
       "Festanstellung",
       "Praktikum",
@@ -750,7 +759,7 @@ export const companies: CompanyWithContact[] = [
   {
     "id": "22",
     "name": "Hawart OMV Landtechnik GmbH",
-    "branche": "Handwerk & Bau",
+    "branche": "Industrie & Produktion",
     "initialen": "HO",
     "adresse": "Plau am See",
     "telefon": "+49 38735 82216",
@@ -760,7 +769,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Christoph Frick",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girls Day",
+      "Boys & Girlsday",
       "Ferienjob",
       "Festanstellung",
       "Praktikum",
@@ -799,7 +808,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Frau Kemnitz",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girls Day",
+      "Boys & Girlsday",
       "Duales Studium",
       "Ferienjob",
       "Festanstellung",
@@ -855,7 +864,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Rebekka Jaroß",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girls Day",
+      "Boys & Girlsday",
       "Festanstellung",
       "Praktikum"
     ],
@@ -897,7 +906,7 @@ export const companies: CompanyWithContact[] = [
   {
     "id": "25",
     "name": "Technologik Metallsysteme GmbH",
-    "branche": "Handwerk & Bau",
+    "branche": "Industrie & Produktion",
     "initialen": "TM",
     "adresse": "Plau am See",
     "telefon": "+49 39931 87211",
@@ -970,7 +979,7 @@ export const companies: CompanyWithContact[] = [
   {
     "id": "26",
     "name": "Bäckerei und Konditorei Behrens",
-    "branche": "Handel & Vertrieb",
+    "branche": "Hotel & Gastronomie",
     "initialen": "BK",
     "adresse": "Plau am See",
     "telefon": "+49 173 1651753",
@@ -980,7 +989,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Hannes Behrens/ Heidi Schaumkessel",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girls Day",
+      "Boys & Girlsday",
       "Ferienjob",
       "Festanstellung",
       "Praktikum"
@@ -1099,7 +1108,7 @@ export const companies: CompanyWithContact[] = [
   {
     "id": "30",
     "name": "Fries GmbH",
-    "branche": "Öffentlicher Dienst",
+    "branche": "Transport & Logistik",
     "initialen": "F",
     "adresse": "Plau am See",
     "telefon": "+49 38737 50463",
@@ -1109,7 +1118,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Angie Schröder",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girls Day",
+      "Boys & Girlsday",
       "Festanstellung",
       "Praktikum",
       "Praxislerntag"
@@ -1159,7 +1168,7 @@ export const companies: CompanyWithContact[] = [
   {
     "id": "31",
     "name": "Volkssolidarität Kreisverband Parchim e.V.",
-    "branche": "Handwerk & Bau",
+    "branche": "Medizin & Pflege",
     "initialen": "VK",
     "adresse": "Plau am See",
     "telefon": "+49 3871 267220",
@@ -1169,7 +1178,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Markus von Jan",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girls Day",
+      "Boys & Girlsday",
       "Ferienjob",
       "Festanstellung",
       "Praktikum",
@@ -1381,6 +1390,110 @@ export const companies: CompanyWithContact[] = [
     "benefits": [
       "Übernahmegarantie (Azubis)"
     ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "37",
+    "name": "Pavillon",
+    "branche": "Hotel & Gastronomie",
+    "initialen": "P",
+    "adresse": "Plau am See",
+    "telefon": "+49 173 6145410",
+    "email": "snake266@gmx.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Bianka Moldenhauer",
+    "anstellungsarten": [
+      "Boys & Girlsday",
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum",
+      "Minijob",
+      "Teilzeit"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Pavillon",
+        "beschreibung": "",
+        "anstellungsart": "Boys & Girlsday"
+      }
+    ],
+    "benefits": [],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "38",
+    "name": "BEECH Resort Plauer See",
+    "branche": "Hotel & Gastronomie",
+    "initialen": "BR",
+    "adresse": "Plau am See",
+    "telefon": "+49 173 6740900",
+    "email": "talente@five-e-group.com",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Urszula Wycech",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum",
+      "Minijob",
+      "Teilzeit",
+      "Vollzeit"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Service/ Housekeeping/ Küche/ Garten/ Technik/ Rezeption",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "E-Ladesäulen",
+      "Mitarbeiter-Rabatte",
+      "Weiterbildungsbudget",
+      "Übernahmegarantie (Azubis)",
+      "Sonn-, Feiertags- und Nachtzuschläge",
+      "Mitarbeiterkantine",
+      "Berufsbekleidung inkl",
+      "Reinigung",
+      "Möblierte Personalunterkünfte vorhanden",
+      "30% Rabatt in allen unseren gastronomischen Outlets und weitere Vergünstigungen",
+      "Aktive und digitale Fortbildungsmöglichkeiten",
+      "Vergünstigte Übernachtungsmöglichkeiten im deutschsprachigen Raum/Perso Nights"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "39",
+    "name": "Parkhotel Klüschenberg",
+    "branche": "Hotel & Gastronomie",
+    "initialen": "PK",
+    "adresse": "Plau am See",
+    "telefon": "+49 385 73549410",
+    "email": "info@klueschenberg.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Beatrice Gotzian",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Ferienjob",
+      "Minijob"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Hotel und Gastronomie",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [],
     "schnuppertage": true,
     "aktiv": true
   }
