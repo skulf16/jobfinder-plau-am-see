@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import LogoSlider from "./LogoSlider";
+import { companies } from "@/data/companies";
 
 export default function Hero() {
+  const unternehmenCount = companies.length;
+  const branchenCount = new Set(companies.map((c) => c.branche)).size;
+  const stellenCount = companies.reduce((sum, c) => sum + (c.stellenangebote?.length || 0), 0);
+
   return (
     <section className="relative bg-gradient-to-br from-hero-1 via-hero-2 to-secondary bg-[length:200%_200%] animate-[heroGradient_12s_ease_infinite] pb-8 md:pb-16">
       {/* Content */}
@@ -39,16 +44,16 @@ export default function Hero() {
             </p>
             <div className="flex gap-8 md:gap-12">
               <div>
-                <div className="font-semibold text-2xl text-primary">12+</div>
+                <div className="font-semibold text-2xl text-primary">{unternehmenCount}</div>
                 <div className="text-[11px] text-white/50 mt-0.5">Unternehmen</div>
               </div>
               <div>
-                <div className="font-semibold text-2xl text-primary">10</div>
+                <div className="font-semibold text-2xl text-primary">{branchenCount}</div>
                 <div className="text-[11px] text-white/50 mt-0.5">Branchen</div>
               </div>
               <div>
-                <div className="font-semibold text-2xl text-primary">Direkt</div>
-                <div className="text-[11px] text-white/50 mt-0.5">Bewerben</div>
+                <div className="font-semibold text-2xl text-primary">{stellenCount}</div>
+                <div className="text-[11px] text-white/50 mt-0.5">Offene Stellen</div>
               </div>
             </div>
           </div>
