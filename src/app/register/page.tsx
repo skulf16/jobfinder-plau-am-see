@@ -20,6 +20,7 @@ interface FormData {
   brancheSonstiges: string;
   // Step 3
   schnuppertage: boolean | null;
+  boysGirlsday: boolean | null;
   // Step 4
   arbeitszeitModelle: string[];
   // Step 5
@@ -48,7 +49,6 @@ const SUCHKATEGORIEN = [
   "Praktikanten",
   "Ferienjobber",
   "Praxislerntag",
-  "Boys & Girlsday",
 ];
 
 const BRANCHEN = [
@@ -285,7 +285,7 @@ function Step3({
       <p className="text-gray-500 text-sm mb-6">
         Bieten Sie Schnuppertage / Hospitationstage an?
       </p>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-4 mb-8">
         <ChoiceCard
           label="Ja"
           description="Wir bieten Interessierten die Möglichkeit, uns kennenzulernen"
@@ -297,6 +297,27 @@ function Step3({
           description="Wir bieten aktuell keine Schnuppertage an"
           active={data.schnuppertage === false}
           onClick={() => setData({ ...data, schnuppertage: false })}
+        />
+      </div>
+
+      <h2 className="text-2xl font-bold text-dark mb-2">
+        Boys &amp; Girlsday
+      </h2>
+      <p className="text-gray-500 text-sm mb-6">
+        Nehmen Sie am Boys &amp; Girlsday teil?
+      </p>
+      <div className="grid grid-cols-2 gap-4">
+        <ChoiceCard
+          label="Ja"
+          description="Wir nehmen am Boys & Girlsday teil"
+          active={data.boysGirlsday === true}
+          onClick={() => setData({ ...data, boysGirlsday: true })}
+        />
+        <ChoiceCard
+          label="Nein"
+          description="Wir nehmen nicht am Boys & Girlsday teil"
+          active={data.boysGirlsday === false}
+          onClick={() => setData({ ...data, boysGirlsday: false })}
         />
       </div>
     </div>
@@ -748,6 +769,7 @@ const initialFormData: FormData = {
   branche: "",
   brancheSonstiges: "",
   schnuppertage: null,
+  boysGirlsday: null,
   arbeitszeitModelle: [],
   arbeitszeiten: [],
   arbeitsmodell: [],
@@ -778,7 +800,7 @@ export default function RegisterPage() {
           (data.branche !== "Sonstiges" || data.brancheSonstiges.trim() !== "")
         );
       case 3:
-        return data.schnuppertage !== null;
+        return data.schnuppertage !== null && data.boysGirlsday !== null;
       case 4:
         return data.arbeitszeitModelle.length > 0;
       case 5:
