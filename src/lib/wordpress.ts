@@ -15,25 +15,53 @@ interface WPMedia {
 function decode(s: string): string {
   return s
     .replace(/&amp;/g, "&")
-    .replace(/&#8211;/g, "–")
+    .replace(/&#038;/g, "&")
+    .replace(/&#8211;/g, "-")
     .replace(/&#8217;/g, "'")
     .replace(/&quot;/g, '"')
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
-    .replace(/&#038;/g, "&");
+    .replace(/„/g, '"')
+    .replace(/"/g, '"')
+    .trim();
 }
 
+/**
+ * Normalize company name for fuzzy matching.
+ * Strips legal suffixes, special chars, and lowercases.
+ */
 function normalize(s: string): string {
-  return s
+  return decode(s)
     .toLowerCase()
-    .replace(/gmbh|kg|ag|mbh|e\.?v\.?|eg/g, "")
+    .replace(/\bgmbh\b|\bkg\b|\bag\b|\bmbh\b|\be\.?v\.?\b|\beg\b|\bgesellschaft\b/g, "")
     .replace(/[^a-zäöü0-9]+/gi, "")
     .trim();
 }
 
 /**
+ * Manual aliases for names that differ between CSV and WordPress.
+ * Maps CSV name (normalized) → WordPress name (normalized).
+ */
+const NAME_ALIASES: Record<string, string> = {
+  etlschmidtparternsteuerberatungscoplauamsee: "etlschmidtpartnersteuerberatungscoplauamsee",
+  wifögswm: "wirtschaftsförderungsüdwestmecklenburg",
+  mediclin: "mediclinklinikenplauamsee",
+};
+
+/**
+ * External logo URLs for companies not in WordPress.
+ * Keyed by normalized company name.
+ */
+const LOGO_OVERRIDES: Record<string, string> = {
+  wohnungsplauplaumbh:
+    "https://wohnen-plau.de/wp-content/uploads/2026/03/wohnungsgesellschaft-plau-am-see-logo-1.png",
+  agenturfürarbeit:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Logo_Bundesagentur_für_Arbeit.svg/320px-Logo_Bundesagentur_für_Arbeit.svg.png",
+};
+
+/**
  * Returns a Map from normalized company name → logo URL.
- * Used as an override layer on top of the static companies list.
+ * Combines WordPress featured media with manual overrides.
  */
 export async function fetchCompanyLogos(): Promise<Map<string, string>> {
   const result = new Map<string, string>();
@@ -41,7 +69,7 @@ export async function fetchCompanyLogos(): Promise<Map<string, string>> {
     const res = await fetch(`${WP_BASE}/wp-json/wp/v2/project?per_page=100`, {
       next: { revalidate: REVALIDATE },
     });
-    if (!res.ok) return result;
+    if (!res.ok) return new Map(Object.entries(LOGO_OVERRIDES));
 
     const projects: WPProject[] = await res.json();
     const mediaIds = [...new Set(projects.map((p) => p.featured_media).filter((id) => id > 0))];
@@ -61,13 +89,25 @@ export async function fetchCompanyLogos(): Promise<Map<string, string>> {
     for (const p of projects) {
       const url = mediaMap.get(p.featured_media);
       if (url) {
-        result.set(normalize(decode(p.title.rendered)), url);
+        result.set(normalize(p.title.rendered), url);
       }
     }
   } catch (e) {
     console.error("WordPress logo fetch failed:", e);
   }
+
+  // Apply manual overrides (take precedence over WP)
+  for (const [key, url] of Object.entries(LOGO_OVERRIDES)) {
+    result.set(key, url);
+  }
+
   return result;
 }
 
-export { normalize as normalizeCompanyName };
+/**
+ * Normalize company name and apply aliases for matching.
+ */
+export function normalizeCompanyName(s: string): string {
+  const norm = normalize(s);
+  return NAME_ALIASES[norm] ?? norm;
+}
