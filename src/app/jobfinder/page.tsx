@@ -452,12 +452,12 @@ export default function JobfinderPage() {
   ============================================================ */
 
   return (
-    <div className="min-h-screen bg-[#F5F3F0] py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-hero-1 via-hero-2 to-secondary bg-[length:200%_200%] animate-[heroGradient_12s_ease_infinite] pt-[96px] pb-12 px-4">
       {/* Back to home */}
       <div className="max-w-[800px] mx-auto mb-6">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 transition-colors"
+          className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
         >
           <svg
             className="w-4 h-4"

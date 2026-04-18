@@ -22,6 +22,7 @@ export interface Company {
   benefits: string[];
   schnuppertage: boolean;
   aktiv: boolean;
+  logo?: string;
 }
 
 export interface JFCompany {

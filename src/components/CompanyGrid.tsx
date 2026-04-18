@@ -5,12 +5,13 @@ import { demoUnternehmen, type Company } from "@/data";
 import CompanyModal from "./CompanyModal";
 import JobBadge from "./JobBadge";
 
-export default function CompanyGrid() {
+export default function CompanyGrid({ companies }: { companies?: Company[] } = {}) {
+  const data = companies && companies.length > 0 ? companies : demoUnternehmen;
   const [brFilter, setBrFilter] = useState("");
   const [artFilter, setArtFilter] = useState("");
   const [modalCompany, setModalCompany] = useState<Company | null>(null);
 
-  const active = demoUnternehmen.filter((u) => u.aktiv);
+  const active = data.filter((u) => u.aktiv);
   const branchen = [...new Set(active.map((u) => u.branche))];
 
   const filtered = useMemo(() => {
@@ -83,9 +84,16 @@ export default function CompanyGrid() {
                 onClick={() => setModalCompany(u)}
                 className="bg-white rounded-3xl p-8 text-center cursor-pointer flex flex-col items-center gap-3.5 border border-black/[0.04] hover:shadow-xl hover:-translate-y-1 hover:border-primary transition-all"
               >
-                <div className="w-16 h-16 rounded-2xl bg-secondary text-white flex items-center justify-center font-bold text-[22px]">
-                  {u.initialen}
-                </div>
+                {u.logo ? (
+                  <div className="w-40 h-40 rounded-2xl bg-white border border-gray-100 flex items-center justify-center overflow-hidden p-4">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={u.logo} alt={u.name} className="max-w-full max-h-full object-contain" />
+                  </div>
+                ) : (
+                  <div className="w-32 h-32 rounded-2xl bg-secondary text-white flex items-center justify-center font-bold text-[40px]">
+                    {u.initialen}
+                  </div>
+                )}
                 <div className="font-bold text-[15px] text-dark leading-tight">{u.name}</div>
                 <div className="text-xs text-gray-400 -mt-1.5">{u.branche}</div>
                 <div className="flex flex-wrap gap-1.5 justify-center mt-auto pt-2">

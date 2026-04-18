@@ -844,7 +844,7 @@ export default function RegisterPage() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-[#FAFAFA] pt-[72px]">
+      <div className="min-h-screen bg-gradient-to-br from-hero-1 via-hero-2 to-secondary bg-[length:200%_200%] animate-[heroGradient_12s_ease_infinite] pt-[72px]">
         <div className="max-w-[700px] mx-auto px-4 py-12">
           <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12">
             <SuccessScreen />
@@ -855,12 +855,12 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] pt-[72px]">
+    <div className="min-h-screen bg-gradient-to-br from-hero-1 via-hero-2 to-secondary bg-[length:200%_200%] animate-[heroGradient_12s_ease_infinite] pt-[72px]">
       <div className="max-w-[700px] mx-auto px-4 py-12">
         {/* Back to home link */}
         <Link
           href="/"
-          className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-dark no-underline mb-6 transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm text-white/70 hover:text-white no-underline mb-6 transition-colors"
         >
           <svg
             width="16"

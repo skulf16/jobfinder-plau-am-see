@@ -40,16 +40,21 @@ export default function Footer() {
 
           <div>
             <h4 className="text-[13px] font-bold text-white mb-4 uppercase tracking-wider">Kontakt</h4>
-            <span className="block text-[13px] text-white/70 py-1">Plau am See</span>
-            <span className="block text-[13px] text-white/70 py-1">info@jobfinder-plau.de</span>
+            <span className="block text-[13px] text-white font-semibold py-0.5">Corinna Thieme</span>
+            <span className="block text-[13px] text-white/70 py-0.5">Wirtschaftsförderung</span>
+            <span className="block text-[13px] text-white/70 py-0.5">Stadt Plau am See</span>
+            <span className="block text-[13px] text-white/70 py-0.5 mb-2">Zentrale Dienste</span>
+            <a href="tel:+4938735494520" className="block text-[13px] text-white/70 py-0.5 no-underline hover:text-primary transition-colors">
+              +49 (0)38735 494-52
+            </a>
+            <a href="mailto:c.thieme@amtplau.de" className="block text-[13px] text-white/70 py-0.5 no-underline hover:text-primary transition-colors">
+              c.thieme@amtplau.de
+            </a>
           </div>
         </div>
 
         <div className="border-t border-white/20 pt-6 flex justify-between items-center text-xs">
           <span>&copy; {new Date().getFullYear()} Jobfinder Plau am See</span>
-          <Link href="/admin" className="text-white/60 no-underline hover:text-white transition-colors">
-            Admin
-          </Link>
         </div>
       </div>
     </footer>

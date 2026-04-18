@@ -16,7 +16,8 @@ interface FlatJob {
   branche: string;
 }
 
-export default function JobsPreview() {
+export default function JobsPreview({ companies }: { companies?: Company[] } = {}) {
+  const data = companies && companies.length > 0 ? companies : demoUnternehmen;
   const [brFilter, setBrFilter] = useState("");
   const [artFilter, setArtFilter] = useState("");
   const [showCount, setShowCount] = useState(5);
@@ -24,7 +25,7 @@ export default function JobsPreview() {
 
   const allJobs = useMemo(() => {
     const jobs: FlatJob[] = [];
-    demoUnternehmen
+    data
       .filter((u) => u.aktiv)
       .forEach((u) => {
         u.stellenangebote.forEach((s) => {
@@ -38,7 +39,7 @@ export default function JobsPreview() {
         });
       });
     return jobs;
-  }, []);
+  }, [data]);
 
   const filtered = useMemo(() => {
     let f = allJobs;
@@ -48,7 +49,7 @@ export default function JobsPreview() {
   }, [allJobs, brFilter, artFilter]);
 
   const visible = filtered.slice(0, showCount);
-  const branchen = [...new Set(demoUnternehmen.map((u) => u.branche))];
+  const branchen = [...new Set(data.map((u) => u.branche))];
 
   return (
     <section id="jobs-preview" className="pt-32 md:pt-48 pb-[calc(100px+8vh)] md:pb-[calc(180px+10vh)] bg-white">
@@ -95,7 +96,7 @@ export default function JobsPreview() {
               <div
                 key={j.id}
                 onClick={() => {
-                  const c = demoUnternehmen.find((u) => u.id === j.firmaId);
+                  const c = data.find((u) => u.id === j.firmaId);
                   if (c) setModalCompany(c);
                 }}
                 className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 bg-white rounded-2xl border border-black/[0.06] hover:shadow-lg hover:border-transparent hover:-translate-y-0.5 transition-all cursor-pointer"

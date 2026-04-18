@@ -1,0 +1,1387 @@
+import type { Company } from "./index";
+
+export interface CompanyWithContact extends Company {
+  ansprechpartner?: string;
+}
+
+export const companies: CompanyWithContact[] = [
+  {
+    "id": "1",
+    "name": "Volutus GmbH/ Chandyshop/ Biergarten",
+    "branche": "Handel & Vertrieb",
+    "initialen": "VC",
+    "adresse": "Plau am See",
+    "telefon": "+49 1522 3105755",
+    "email": "info@volutus.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Herr Kröcher",
+    "anstellungsarten": [
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum",
+      "Praxislerntag"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Verkauf / Service",
+        "beschreibung": "",
+        "anstellungsart": "Ferienjob"
+      }
+    ],
+    "benefits": [
+      "Flexible Arbeitszeiten / Gleitzeit",
+      "Rabatt auf das komplette Sortiment",
+      "2 Monate Urlaub im Jahr"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "2",
+    "name": "ETL Schmidt & Partern GmbH Steuerberatungsgesellschaft & Co. Plau am See KG",
+    "branche": "Steuerberatung & Recht",
+    "initialen": "ES",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 8340",
+    "email": "karin.rosenow@etl.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Karin Rosenow",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Duales Studium"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Steuerfachangestellte/r",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Kauffrau/Kaufmann für Büromanagement",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Flexible Arbeitszeiten / Gleitzeit",
+      "Homeoffice-Optionen",
+      "Jobrad",
+      "modern ausgestatette Arbeitsplätze"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "3",
+    "name": "Febe Bau GmbH",
+    "branche": "Handwerk & Bau",
+    "initialen": "FB",
+    "adresse": "Plau am See",
+    "telefon": "+49 173 2071659",
+    "email": "buchhaltung@feddeler.com",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Anne Feddeler",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Handwerk",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Übernahmegarantie (Azubis)"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "4",
+    "name": "Deutsche Proventus AG",
+    "branche": "Finanz- & Versicherungswesen",
+    "initialen": "DP",
+    "adresse": "Plau am See",
+    "telefon": "+49 172 1619298",
+    "email": "katharina.krause@proventus.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Katharina Krause",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Boys & Girls Day",
+      "Festanstellung",
+      "Praxislerntag"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Finanzdienstleistungen (Versicherungen",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Finanzierungen",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_2",
+        "titel": "Geldanlagen)",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Flexible Arbeitszeiten / Gleitzeit",
+      "Homeoffice-Optionen"
+    ],
+    "schnuppertage": false,
+    "aktiv": true
+  },
+  {
+    "id": "5",
+    "name": "Kindertagesstätte Zwergenparadies",
+    "branche": "Bildung & Soziales",
+    "initialen": "KZ",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 41897",
+    "email": "kita.plau@kloster-dobbertin.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Kirstin Laabs",
+    "anstellungsarten": [],
+    "stellenangebote": [],
+    "benefits": [],
+    "schnuppertage": false,
+    "aktiv": true
+  },
+  {
+    "id": "6",
+    "name": "Bauservice & Transporte Tschiersch-Seehafer",
+    "branche": "Handwerk & Bau",
+    "initialen": "BT",
+    "adresse": "Plau am See",
+    "telefon": "+49 1520 2302788",
+    "email": "info@bauservice-transporte-tschiersch-seehafer.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Sven Tschiersch-Seehafer",
+    "anstellungsarten": [
+      "Festanstellung"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Tief-und Straßenbauer",
+        "beschreibung": "",
+        "anstellungsart": "Festanstellung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Baggerfahrer",
+        "beschreibung": "",
+        "anstellungsart": "Festanstellung"
+      }
+    ],
+    "benefits": [
+      "Weihnachtsgeld und ggf",
+      "Sonderzahlung (Bonus)"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "7",
+    "name": "WiFöG swm",
+    "branche": "Öffentlicher Dienst",
+    "initialen": "WS",
+    "adresse": "Plau am See",
+    "telefon": "+49 3871 7225607",
+    "email": "haroyan@invest-swm.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Haroyan, Voskehat",
+    "anstellungsarten": [],
+    "stellenangebote": [],
+    "benefits": [],
+    "schnuppertage": false,
+    "aktiv": true
+  },
+  {
+    "id": "8",
+    "name": "Kita Bunte Stifte",
+    "branche": "Bildung & Soziales",
+    "initialen": "KB",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 492263",
+    "email": "kitabuntestifte@ill-ev.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Yvonne Kuhring",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Boys & Girls Day",
+      "Festanstellung",
+      "Praktikum"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Erzieher/innen",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Urlaubs & Weihnachtsgeld",
+      "2 urlaubsfreie Tage (24",
+      "12",
+      "und 31",
+      "12",
+      ")",
+      "kostenfreie Mittagsverpflegung",
+      "1x jährlich großes Betriebsfest"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "9",
+    "name": "Eiscafe Al Ponte",
+    "branche": "Hotel & Gastronomie",
+    "initialen": "EA",
+    "adresse": "Plau am See",
+    "telefon": "+49 172 4871056",
+    "email": "eiszeit@eiscafe-al-ponte.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Marlis Rupp",
+    "anstellungsarten": [
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Gastronomie",
+        "beschreibung": "",
+        "anstellungsart": "Ferienjob"
+      }
+    ],
+    "benefits": [
+      "Flexible Arbeitszeiten / Gleitzeit",
+      "Eis :-)"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "10",
+    "name": "Bauunternehmen Ahrens",
+    "branche": "Handwerk & Bau",
+    "initialen": "BA",
+    "adresse": "Plau am See",
+    "telefon": "+49 175 4043206",
+    "email": "Bau.ahrens@mail.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Olaf Ahrens",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Ferienjob",
+      "Praktikum"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Maurer und Betonbauer",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Übernahmegarantie (Azubis)"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "11",
+    "name": "Ferienpark Heidenholz & Aparthotel „Am See“",
+    "branche": "Handwerk & Bau",
+    "initialen": "FH",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 850",
+    "email": "info@ferienpark-heidenholz.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Timo Weisbrich",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Boys & Girls Day",
+      "Duales Studium",
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum",
+      "Praxislerntag"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Hotelfachmann/frau",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Gastronomie (Küche/Service)",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_2",
+        "titel": "Tierpflege",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_3",
+        "titel": "Buchhaltung",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_4",
+        "titel": "Facility Management",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Folgen"
+    ],
+    "schnuppertage": false,
+    "aktiv": true
+  },
+  {
+    "id": "12",
+    "name": "Agentur für Arbeit",
+    "branche": "Öffentlicher Dienst",
+    "initialen": "AF",
+    "adresse": "Plau am See",
+    "telefon": "+49 3871 6345580",
+    "email": "volker.syring@jobcenter-ge.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Herr Volker Syring",
+    "anstellungsarten": [],
+    "stellenangebote": [],
+    "benefits": [],
+    "schnuppertage": false,
+    "aktiv": true
+  },
+  {
+    "id": "13",
+    "name": "Ganzlin Beschichtungspulver GmbH",
+    "branche": "Öffentlicher Dienst",
+    "initialen": "GB",
+    "adresse": "Plau am See",
+    "telefon": "+49 38737 3030",
+    "email": "bewerbung@ganzlin.com",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "André Beckerman",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Duales Studium",
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Ausbildung Mechatroniker",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Ausbildung Fachkraft für Lagerlogistik",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_2",
+        "titel": "Ausbildung Industriekaufmann",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_3",
+        "titel": "Mitarbeiter Wareneingang und Warenausgang",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_4",
+        "titel": "Mitarbeiter Produktion",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_5",
+        "titel": "Mitarbeiter Produktentwicklung",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Flexible Arbeitszeiten / Gleitzeit",
+      "Urlaubs & Weihnachtsgeld",
+      "Übernahmegarantie (Azubis)",
+      "Jeden Monat einen Tankgutschein"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "14",
+    "name": "Lenk Küchendesign & Montageservice",
+    "branche": "Handwerk & Bau",
+    "initialen": "LK",
+    "adresse": "Plau am See",
+    "telefon": "+49 1520 2979163",
+    "email": "info@kuemo-lenk.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Dürten Lenk",
+    "anstellungsarten": [
+      "Festanstellung"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Handwerk",
+        "beschreibung": "",
+        "anstellungsart": "Festanstellung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Bürokauffrau",
+        "beschreibung": "",
+        "anstellungsart": "Festanstellung"
+      }
+    ],
+    "benefits": [
+      "Flexible Arbeitszeiten / Gleitzeit",
+      "Urlaubs & Weihnachtsgeld"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "15",
+    "name": "VR Bank Mecklenburg eG",
+    "branche": "Finanz- & Versicherungswesen",
+    "initialen": "VB",
+    "adresse": "Plau am See",
+    "telefon": "+49 385 54905017",
+    "email": "susanne.kleist@vrbankmecklenburg.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Susanne Kleist",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Duales Studium",
+      "Festanstellung",
+      "Praktikum"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Bankkaufmann/Bankkauffrau (w/m/d)",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "andere Berufe im Bereich Banken und Finanzen",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Flexible Arbeitszeiten / Gleitzeit",
+      "Homeoffice-Optionen",
+      "Jobrad",
+      "Urlaubs & Weihnachtsgeld",
+      "Health-Management und Betriebliches Gesundheitsmanagement",
+      "Sabbatical-Option",
+      "Erholungsbeihilfe und vieles mehr"
+    ],
+    "schnuppertage": false,
+    "aktiv": true
+  },
+  {
+    "id": "16",
+    "name": "Steuerberater Steffen Steinhäuser",
+    "branche": "Steuerberatung & Recht",
+    "initialen": "SS",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 81600",
+    "email": "info@steuerberater-steinhaeuser.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Steffen Steinhäuser",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Boys & Girls Day",
+      "Festanstellung",
+      "Praxislerntag"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Steuerfachangestellte/r (m/w/d)",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Bilanzbuchhalter/in (m/w/d)",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_2",
+        "titel": "Steuerfachwirt/in (m/w/d)",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Flexible Arbeitszeiten / Gleitzeit",
+      "Homeoffice-Optionen",
+      "Jobrad",
+      "Urlaubs & Weihnachtsgeld",
+      "Mtl",
+      "Massage",
+      "Wtl",
+      "Team-Essen",
+      "Tankgutschein",
+      "Erholungsbeihilfe"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "17",
+    "name": "Stadt Plau am See",
+    "branche": "Bildung & Soziales",
+    "initialen": "SP",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 49415",
+    "email": "personal@amtplau.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "F. Böhm / C. Schröder",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Festanstellung",
+      "Praktikum"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Kommunale Verwaltung / Kinderbetreuung kommunaler Hort",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Flexible Arbeitszeiten / Gleitzeit",
+      "Urlaubs & Weihnachtsgeld"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "18",
+    "name": "MS Zeltbau & Partyservice",
+    "branche": "Handwerk & Bau",
+    "initialen": "MZ",
+    "adresse": "Plau am See",
+    "telefon": "+49 173 2190511",
+    "email": "sp@ms-zeltbau.com",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Stefanie Bartsch",
+    "anstellungsarten": [
+      "Festanstellung"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Monteur von Festzelten",
+        "beschreibung": "",
+        "anstellungsart": "Festanstellung"
+      }
+    ],
+    "benefits": [],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "19",
+    "name": "Pflegedienst heitmann poser",
+    "branche": "Medizin & Pflege",
+    "initialen": "PH",
+    "adresse": "Plau am See",
+    "telefon": "+49 172 2396348",
+    "email": "info@pflegedienst-karow.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Claudia Poser",
+    "anstellungsarten": [
+      "Boys & Girls Day",
+      "Festanstellung",
+      "Praktikum",
+      "Praxislerntag"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Pflege",
+        "beschreibung": "",
+        "anstellungsart": "Boys & Girls Day"
+      }
+    ],
+    "benefits": [
+      "Firmenwagen",
+      "Urlaubs & Weihnachtsgeld"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "20",
+    "name": "Fischerei Müritz-Plau GmbH",
+    "branche": "Fischerei",
+    "initialen": "FM",
+    "adresse": "Plau am See",
+    "telefon": "+49 3991 153441",
+    "email": "jklos@mueritzfischer.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Janine Klos",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum",
+      "Praxislerntag"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Fischwirt/Verkäufer Fischimbiss /Mitarbeiter Produktion",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Flexible Arbeitszeiten / Gleitzeit",
+      "Übernahmegarantie (Azubis)",
+      "Sonn- und Feiertagszuschläge, vollständige Berufsbekleidung, Übernahmegarantie bei guten Leistungen, Übernahme Kosten Bootsführerschein, günstige Mitarbeiter-Angelkarte, Mitarbeiterrabatte an allen Standorten, Zahlung nach Tarif"
+    ],
+    "schnuppertage": false,
+    "aktiv": true
+  },
+  {
+    "id": "21",
+    "name": "Altenhilfezentrum Dr. Wilde - Haus Plau am See",
+    "branche": "Medizin & Pflege",
+    "initialen": "AD",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 8950",
+    "email": "ahz.plau@kloster-dobbertin.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Carmen Schuldt",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Boys & Girls Day",
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum",
+      "Praxislerntag"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Pflege und Betreuung",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Jobrad",
+      "Urlaubs & Weihnachtsgeld",
+      "Übernahmegarantie (Azubis)"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "22",
+    "name": "Hawart OMV Landtechnik GmbH",
+    "branche": "Handwerk & Bau",
+    "initialen": "HO",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 82216",
+    "email": "klebe@hawartomv.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Christoph Frick",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Boys & Girls Day",
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum",
+      "Praxislerntag"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Handwerk",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Jobrad",
+      "Urlaubs & Weihnachtsgeld",
+      "Übernahmegarantie (Azubis)",
+      "kostenlose Getränke",
+      "kostenlose Parkplätze",
+      "Mitarbeiterrabatte",
+      "Übernahme der Kosten für Arbeitsbekleidung"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "23",
+    "name": "Metallbau Senkbeil GmbH",
+    "branche": "Handwerk & Bau",
+    "initialen": "MS",
+    "adresse": "Plau am See",
+    "telefon": "+49 38737 20050",
+    "email": "office@senkbeil-gruppe.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Frau Kemnitz",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Boys & Girls Day",
+      "Duales Studium",
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum",
+      "Praxislerntag"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Handwerk",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "- Metallbauer (Konstruktionstechnik) für Produktion Aluminium/Schlosser und Montage",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_2",
+        "titel": "- Technischer Systemplaner",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_3",
+        "titel": "- Büro/Verwaltung",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "- attraktive Vergütung + Sonderzahlungen",
+      "- jährliche Sommer- und Weihnachtsferien",
+      "- komplette Versorgung mit Kalt- & Heißgetränken",
+      "- Unterstützung bei der Wohnungssuche",
+      "- Zuschuß zu Führerschein oder Mietzahlung möglich (AZUBIS)"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "24",
+    "name": "Luchs Haustechnik GmbH",
+    "branche": "Handwerk & Bau",
+    "initialen": "LH",
+    "adresse": "Plau am See",
+    "telefon": "+49 38738 139870",
+    "email": "info@luchs-haustechnik.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Rebekka Jaroß",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Boys & Girls Day",
+      "Festanstellung",
+      "Praktikum"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "SHK Anlagenmechaniker m/w/d",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "SHK Meister m/w/d",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_2",
+        "titel": "Auszubildender Anlagenmechaniker Sanitär-",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_3",
+        "titel": "Heizungs-und Klimatechnik m/w/d",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Firmenwagen",
+      "Jobrad",
+      "Übernahmegarantie (Azubis)",
+      "4-Tage Woche, Bereit­stellung der Berufs­beklei­dung, Individu­elle Coa­chings, Förde­rung und beruf­liche Auf­stiegs­chancen, Inter­net­nut­zung, Mitarbeiter­events, Mit­arbeiter­handy, Mitarbeiter­rabatte, Moderne Betriebs­ausstattung, Parkplatz, steuer­freie Zusatz­leistungen, übertarifliche Bezahlung, Gutes Betriebsklima, Feste Arbeits­zeiten und die Ver­ein­bar­keit von Fami­lie und Beruf - Work-Life-Balance"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "25",
+    "name": "Technologik Metallsysteme GmbH",
+    "branche": "Handwerk & Bau",
+    "initialen": "TM",
+    "adresse": "Plau am See",
+    "telefon": "+49 39931 87211",
+    "email": "a.buenger@technologik.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Anna Bünger",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum",
+      "Praxislerntag"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Stahl - und Metallbau",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Handwerk",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_2",
+        "titel": "Berufe:",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_3",
+        "titel": "Konstruktionsmechaniker (ehemals Schlosser)",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_4",
+        "titel": "Fachkraft für Metalltechnik (ehemals Teilezurichter)",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_5",
+        "titel": "Schweißer MAG/ WIG",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_6",
+        "titel": "Monteure für Stahlbau",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Jobrad",
+      "Übernahmegarantie (Azubis)",
+      "Personal Training",
+      "kostenlose Getränke",
+      "Firmenfeiern",
+      "Tankgutscheine"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "26",
+    "name": "Bäckerei und Konditorei Behrens",
+    "branche": "Handel & Vertrieb",
+    "initialen": "BK",
+    "adresse": "Plau am See",
+    "telefon": "+49 173 1651753",
+    "email": "behrensalx@aol.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Hannes Behrens/ Heidi Schaumkessel",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Boys & Girls Day",
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Handwerk",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Verkauf",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_2",
+        "titel": "Lebensmittel/ Bäckerhandwerk",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Urlaubs & Weihnachtsgeld",
+      "Übernahmegarantie (Azubis)"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "27",
+    "name": "Leinerstift Erziehungsstellen",
+    "branche": "Bildung & Soziales",
+    "initialen": "LE",
+    "adresse": "Plau am See",
+    "telefon": "+49 1525 6774101",
+    "email": "g.jakobs@leinerstift.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Gisela Jakobs",
+    "anstellungsarten": [
+      "Duales Studium",
+      "Festanstellung"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Soziale Arbeit",
+        "beschreibung": "",
+        "anstellungsart": "Duales Studium"
+      },
+      {
+        "id": "s_1",
+        "titel": "Erzieher*in",
+        "beschreibung": "",
+        "anstellungsart": "Duales Studium"
+      }
+    ],
+    "benefits": [
+      "Flexible Arbeitszeiten / Gleitzeit",
+      "Homeoffice-Optionen",
+      "Jobrad",
+      "Urlaubs & Weihnachtsgeld"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "28",
+    "name": "Wohnungsgesellschaft Plau mbH",
+    "branche": "Immobilien",
+    "initialen": "WP",
+    "adresse": "Plau am See",
+    "telefon": "+49 162 1817256",
+    "email": "info@wohnen-plau.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Jana Maibaum",
+    "anstellungsarten": [],
+    "stellenangebote": [],
+    "benefits": [],
+    "schnuppertage": false,
+    "aktiv": true
+  },
+  {
+    "id": "29",
+    "name": "Landespolizei Mecklenburg-Vorpommern",
+    "branche": "Öffentlicher Dienst",
+    "initialen": "LM",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 8370",
+    "email": "pr.plau@polmv.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Kathrin Mach",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Duales Studium"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Polizevollzugsbeamte",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Spannenden Job an jedem Tag"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "30",
+    "name": "Fries GmbH",
+    "branche": "Öffentlicher Dienst",
+    "initialen": "F",
+    "adresse": "Plau am See",
+    "telefon": "+49 38737 50463",
+    "email": "a.schroeder@fries24.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Angie Schröder",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Boys & Girls Day",
+      "Festanstellung",
+      "Praktikum",
+      "Praxislerntag"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Kaufleute im  Groß- und Außenhandelsmanagement - Azubis",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Kaufleute im  Büromanagement - Azubis",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_2",
+        "titel": "Fachkraft für Lagerlogistik - Azubis + Mitarbeiter",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_3",
+        "titel": "Fachlageristen - Azubis + Mitarbeiter",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_4",
+        "titel": "Berufskraftfahrer - Mitarbeiter",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Jobrad",
+      "Urlaubs & Weihnachtsgeld",
+      "Übernahmegarantie (Azubis)",
+      "Gesundheitstag",
+      "FRIES-Card"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "31",
+    "name": "Volkssolidarität Kreisverband Parchim e.V.",
+    "branche": "Handwerk & Bau",
+    "initialen": "VK",
+    "adresse": "Plau am See",
+    "telefon": "+49 3871 267220",
+    "email": "markus.vonjan@volkssolidaritaet.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Markus von Jan",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Boys & Girls Day",
+      "Ferienjob",
+      "Festanstellung",
+      "Praktikum",
+      "Praxislerntag"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Pflegebereich (Tagespflege",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Ambulanter Pflegedienst)",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_2",
+        "titel": "Kita (Erzieher etc.)",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_3",
+        "titel": "Koch/Köchin für Kantine/Großküche",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Jahressonderzahlung",
+      "30 Tage Urlaub / 24",
+      "12",
+      "und 31",
+      "12",
+      "frei",
+      "betriebliche Altersvorsorge",
+      "Verdienst nach TVöD (Pflegebereich und Kita)",
+      "kostengünstigere Mitgliedschaft im Fitnessstudio",
+      "vergünstigtes Mitarbeiteressen",
+      "Jobrad (geplant)"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "32",
+    "name": "Plauer Dachdecker / Lublow Gerüstbau",
+    "branche": "Handwerk & Bau",
+    "initialen": "PD",
+    "adresse": "Plau am See",
+    "telefon": "+49 160 5659652",
+    "email": "k.blumenthal@lublow-gruppe.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Kevin Blumenthal",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Festanstellung",
+      "Praktikum"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Handwerk (Dachdecker / Gerüstbau)",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Urlaubs & Weihnachtsgeld",
+      "Leistungsprämien",
+      "Weiterbildungen",
+      "Kostenübernahme für Schule / Unterkunft / Fahrtwege"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "33",
+    "name": "MEDICLIN Kliniken Plau am See GmbH & Co. KG.",
+    "branche": "Medizin & Pflege",
+    "initialen": "MK",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 87132",
+    "email": "Bewerbung.plau@mediclin.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Oliver Kaschel",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Festanstellung",
+      "Praktikum"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Gesundheitswesen",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Flexible Arbeitszeiten / Gleitzeit",
+      "Jobrad",
+      "Urlaubs & Weihnachtsgeld",
+      "Übernahmegarantie (Azubis)",
+      "Kostenlose Parkplätze, Vergünstigtes Essen in der Cafeteria, Kostenlose Nutzung der Schwimmhalle und des Fitnessraumes, Vermögenswirksame Leistungen"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "34",
+    "name": "Notar Dirk Tast",
+    "branche": "Steuerberatung & Recht",
+    "initialen": "ND",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 45536",
+    "email": "corinna.tast@notar-tast.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Corinna Tast",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Festanstellung"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Notariatsmitarbeiter",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Urlaubs & Weihnachtsgeld",
+      "Übernahmegarantie (Azubis)",
+      "- Familiäres wertschätzendes Team",
+      "- Flache Hierarchien",
+      "- Teilzeitmodelle",
+      "- Verlässliche Arbeitszeiten ohne Wochendarbeit",
+      "- Kostenübernahme für Fortbildungen",
+      "- Attraktive Vergütung",
+      "- Kostenlose Getränke",
+      "- Teamevents und Betriebsausflüge"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "35",
+    "name": "Mediclin",
+    "branche": "Medizin & Pflege",
+    "initialen": "M",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 878530",
+    "email": "catrin.grabow@mediclin.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Catrin Grabow",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Festanstellung",
+      "Praktikum"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Medizin",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Jobrad",
+      "Übernahmegarantie (Azubis)",
+      "Grossartige Teams mit Spirit im Bereich menschliche Medizin"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  },
+  {
+    "id": "36",
+    "name": "Falk Seehotels GmbH - Seehotel Plau am See",
+    "branche": "Hotel & Gastronomie",
+    "initialen": "FS",
+    "adresse": "Plau am See",
+    "telefon": "+49 38735 840",
+    "email": "birgit.falk@seehorel-plau.de",
+    "website": "",
+    "bewerbungslink": "",
+    "ansprechpartner": "Birgit Falk",
+    "anstellungsarten": [
+      "Ausbildung",
+      "Ferienjob",
+      "Festanstellung"
+    ],
+    "stellenangebote": [
+      {
+        "id": "s_0",
+        "titel": "Hotellerie",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      }
+    ],
+    "benefits": [
+      "Übernahmegarantie (Azubis)"
+    ],
+    "schnuppertage": true,
+    "aktiv": true
+  }
+];
