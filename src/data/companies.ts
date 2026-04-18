@@ -388,23 +388,6 @@ export const companies: CompanyWithContact[] = [
   },
   {
     "id": "12",
-    "name": "Agentur für Arbeit",
-    "branche": "Öffentlicher Dienst",
-    "initialen": "AF",
-    "adresse": "Plau am See",
-    "telefon": "+49 3871 6345580",
-    "email": "volker.syring@jobcenter-ge.de",
-    "website": "",
-    "bewerbungslink": "",
-    "ansprechpartner": "Herr Volker Syring",
-    "anstellungsarten": [],
-    "stellenangebote": [],
-    "benefits": [],
-    "schnuppertage": false,
-    "aktiv": true
-  },
-  {
-    "id": "13",
     "name": "Ganzlin Beschichtungspulver GmbH",
     "branche": "Industrie & Produktion",
     "initialen": "GB",
@@ -469,7 +452,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "14",
+    "id": "13",
     "name": "Lenk Küchendesign & Montageservice",
     "branche": "Handwerk & Bau",
     "initialen": "LK",
@@ -504,7 +487,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "15",
+    "id": "14",
     "name": "VR Bank Mecklenburg eG",
     "branche": "Finanz- & Versicherungswesen",
     "initialen": "VB",
@@ -547,7 +530,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "16",
+    "id": "15",
     "name": "Steuerberater Steffen Steinhäuser",
     "branche": "Steuerberatung & Recht",
     "initialen": "SS",
@@ -599,7 +582,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "17",
+    "id": "16",
     "name": "Stadt Plau am See",
     "branche": "Öffentlicher Dienst",
     "initialen": "SP",
@@ -630,7 +613,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "18",
+    "id": "17",
     "name": "MS Zeltbau & Partyservice",
     "branche": "Handwerk & Bau",
     "initialen": "MZ",
@@ -656,7 +639,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "19",
+    "id": "18",
     "name": "Pflegedienst heitmann poser",
     "branche": "Medizin & Pflege",
     "initialen": "PH",
@@ -688,7 +671,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "20",
+    "id": "19",
     "name": "Fischerei Müritz-Plau GmbH",
     "branche": "Fischerei",
     "initialen": "FM",
@@ -722,7 +705,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "21",
+    "id": "20",
     "name": "Altenhilfezentrum Dr. Wilde - Haus Plau am See",
     "branche": "Medizin & Pflege",
     "initialen": "AD",
@@ -757,7 +740,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "22",
+    "id": "21",
     "name": "Hawart OMV Landtechnik GmbH",
     "branche": "Industrie & Produktion",
     "initialen": "HO",
@@ -796,7 +779,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "23",
+    "id": "22",
     "name": "Metallbau Senkbeil GmbH",
     "branche": "Handwerk & Bau",
     "initialen": "MS",
@@ -852,7 +835,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "24",
+    "id": "23",
     "name": "Luchs Haustechnik GmbH",
     "branche": "Handwerk & Bau",
     "initialen": "LH",
@@ -904,7 +887,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "25",
+    "id": "24",
     "name": "Technologik Metallsysteme GmbH",
     "branche": "Industrie & Produktion",
     "initialen": "TM",
@@ -977,7 +960,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "26",
+    "id": "25",
     "name": "Bäckerei und Konditorei Behrens",
     "branche": "Hotel & Gastronomie",
     "initialen": "BK",
@@ -1022,7 +1005,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "27",
+    "id": "26",
     "name": "Leinerstift Erziehungsstellen",
     "branche": "Bildung & Soziales",
     "initialen": "LE",
@@ -1060,7 +1043,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "28",
+    "id": "27",
     "name": "Wohnungsgesellschaft Plau mbH",
     "branche": "Immobilien",
     "initialen": "WP",
@@ -1077,7 +1060,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "29",
+    "id": "28",
     "name": "Landespolizei Mecklenburg-Vorpommern",
     "branche": "Öffentlicher Dienst",
     "initialen": "LM",
@@ -1106,7 +1089,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "30",
+    "id": "29",
     "name": "Fries GmbH",
     "branche": "Transport & Logistik",
     "initialen": "F",
@@ -1166,7 +1149,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "31",
+    "id": "30",
     "name": "Volkssolidarität Kreisverband Parchim e.V.",
     "branche": "Medizin & Pflege",
     "initialen": "VK",
@@ -1227,7 +1210,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "32",
+    "id": "31",
     "name": "Plauer Dachdecker / Lublow Gerüstbau",
     "branche": "Handwerk & Bau",
     "initialen": "PD",
@@ -1260,7 +1243,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "33",
+    "id": "32",
     "name": "MEDICLIN Kliniken Plau am See GmbH & Co. KG.",
     "branche": "Medizin & Pflege",
     "initialen": "MK",
@@ -1294,7 +1277,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "34",
+    "id": "33",
     "name": "Notar Dirk Tast",
     "branche": "Steuerberatung & Recht",
     "initialen": "ND",
@@ -1332,39 +1315,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "35",
-    "name": "Mediclin",
-    "branche": "Medizin & Pflege",
-    "initialen": "M",
-    "adresse": "Plau am See",
-    "telefon": "+49 38735 878530",
-    "email": "catrin.grabow@mediclin.de",
-    "website": "",
-    "bewerbungslink": "",
-    "ansprechpartner": "Catrin Grabow",
-    "anstellungsarten": [
-      "Ausbildung",
-      "Festanstellung",
-      "Praktikum"
-    ],
-    "stellenangebote": [
-      {
-        "id": "s_0",
-        "titel": "Medizin",
-        "beschreibung": "",
-        "anstellungsart": "Ausbildung"
-      }
-    ],
-    "benefits": [
-      "Jobrad",
-      "Übernahmegarantie (Azubis)",
-      "Grossartige Teams mit Spirit im Bereich menschliche Medizin"
-    ],
-    "schnuppertage": true,
-    "aktiv": true
-  },
-  {
-    "id": "36",
+    "id": "34",
     "name": "Falk Seehotels GmbH - Seehotel Plau am See",
     "branche": "Hotel & Gastronomie",
     "initialen": "FS",
@@ -1394,7 +1345,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "37",
+    "id": "35",
     "name": "Pavillon",
     "branche": "Hotel & Gastronomie",
     "initialen": "P",
@@ -1425,7 +1376,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "38",
+    "id": "36",
     "name": "BEECH Resort Plauer See",
     "branche": "Hotel & Gastronomie",
     "initialen": "BR",
@@ -1470,7 +1421,7 @@ export const companies: CompanyWithContact[] = [
     "aktiv": true
   },
   {
-    "id": "39",
+    "id": "37",
     "name": "Parkhotel Klüschenberg",
     "branche": "Hotel & Gastronomie",
     "initialen": "PK",

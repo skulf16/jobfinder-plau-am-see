@@ -55,8 +55,6 @@ const NAME_ALIASES: Record<string, string> = {
 const LOGO_OVERRIDES: Record<string, string> = {
   wohnungsplauplaumbh:
     "https://wohnen-plau.de/wp-content/uploads/2026/03/wohnungsgesellschaft-plau-am-see-logo-1.png",
-  agenturfürarbeit:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Logo_Bundesagentur_für_Arbeit.svg/320px-Logo_Bundesagentur_für_Arbeit.svg.png",
 };
 
 /**
