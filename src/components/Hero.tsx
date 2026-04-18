@@ -4,13 +4,13 @@ import LogoSlider from "./LogoSlider";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-hero-1 via-hero-2 to-secondary bg-[length:200%_200%] animate-[heroGradient_12s_ease_infinite] pb-16">
+    <section className="relative bg-gradient-to-br from-hero-1 via-hero-2 to-secondary bg-[length:200%_200%] animate-[heroGradient_12s_ease_infinite] pb-8 md:pb-16">
       {/* Content */}
-      <div className="max-w-[1200px] mx-auto px-8 pt-[120px] relative z-10">
-        <div className="flex flex-col md:flex-row gap-12 items-start justify-between">
+      <div className="max-w-[1200px] mx-auto px-5 md:px-8 pt-[100px] md:pt-[120px] relative z-10">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start justify-between">
           {/* Left: Headline + Buttons */}
-          <div className="max-w-[780px] flex-1">
-            <h1 className="text-[56px] md:text-[88px] leading-[0.92] mb-12 tracking-wide text-white font-semibold">
+          <div className="max-w-[780px] flex-1 w-full">
+            <h1 className="text-[44px] md:text-[88px] leading-[0.92] mb-8 md:mb-12 tracking-wide text-white font-semibold">
               JOBFINDER
               <br />
               <span className="text-primary font-normal">PLAU AM SEE</span>
@@ -32,12 +32,12 @@ export default function Hero() {
           </div>
 
           {/* Right: Description + Stats */}
-          <div className="max-w-[420px] text-white/70 text-[15px] leading-relaxed pt-6">
+          <div className="w-full md:max-w-[420px] text-white/70 text-[15px] leading-relaxed pt-2 md:pt-6">
             <p className="mb-6">
               Vom ersten Ferienjob über Praktika bis zur Ausbildung und
               Festanstellung: Entdecke alle Karrieremöglichkeiten in Plau.
             </p>
-            <div className="flex gap-12">
+            <div className="flex gap-8 md:gap-12">
               <div>
                 <div className="font-semibold text-2xl text-primary">12+</div>
                 <div className="text-[11px] text-white/50 mt-0.5">Unternehmen</div>
@@ -56,7 +56,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Image */}
-      <div className="relative max-w-[1136px] mx-auto mt-[3em] mb-[-160px] rounded-2xl overflow-hidden h-[620px] z-20">
+      <div className="relative max-w-[1136px] mx-4 md:mx-auto mt-[3em] mb-[-80px] md:mb-[-160px] rounded-2xl overflow-hidden h-[300px] md:h-[620px] z-20">
         <Image
           src="/hero.jpg"
           alt="Jobs in Plau am See"

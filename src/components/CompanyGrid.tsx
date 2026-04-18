@@ -28,17 +28,17 @@ export default function CompanyGrid() {
   return (
     <section
       id="unternehmen"
-      className="pt-[calc(180px+10vh)] pb-20 bg-gradient-to-br from-hero-1 via-hero-2 to-secondary"
+      className="pt-[calc(100px+8vh)] md:pt-[calc(180px+10vh)] pb-16 md:pb-20 bg-gradient-to-br from-hero-1 via-hero-2 to-secondary"
     >
-      <div className="max-w-[1200px] mx-auto px-8">
+      <div className="max-w-[1200px] mx-auto px-5 md:px-8">
         <div className="flex justify-between items-center mb-8 flex-wrap gap-3">
-          <h2 className="text-5xl font-semibold uppercase text-white">
+          <h2 className="text-3xl md:text-5xl font-semibold uppercase text-white">
             Unternehmen in Plau am See
           </h2>
         </div>
 
         {/* Filters */}
-        <div className="flex gap-4 mb-8 flex-wrap items-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:flex-wrap items-stretch sm:items-center">
           <select
             value={brFilter}
             onChange={(e) => setBrFilter(e.target.value)}

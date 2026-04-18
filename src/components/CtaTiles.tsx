@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function CtaTiles() {
   return (
-    <section className="relative z-10 -mt-[180px] -mb-[180px]">
-      <div className="max-w-[1200px] mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section className="relative z-10 -mt-[100px] -mb-[100px] md:-mt-[180px] md:-mb-[180px]">
+      <div className="max-w-[1200px] mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         {/* Orange tile — Unternehmen registrieren */}
         <Link
           href="/register"
-          className="group relative overflow-hidden rounded-3xl p-10 min-h-[340px] flex flex-col justify-between no-underline bg-gradient-to-br from-[#F97E1A] via-[#F59332] to-[#E06A10] shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all"
+          className="group relative overflow-hidden rounded-3xl p-7 md:p-10 min-h-[280px] md:min-h-[340px] flex flex-col justify-between no-underline bg-gradient-to-br from-[#F97E1A] via-[#F59332] to-[#E06A10] shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all"
         >
           {/* Decorative shapes */}
           <div className="absolute -top-20 -right-20 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
@@ -28,7 +28,7 @@ export default function CtaTiles() {
             <div className="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full mb-4">
               Für Arbeitgeber
             </div>
-            <h3 className="text-white text-4xl md:text-5xl font-semibold uppercase leading-[0.95] mb-3">
+            <h3 className="text-white text-3xl md:text-5xl font-semibold uppercase leading-[0.95] mb-3">
               Unternehmen<br />registrieren
             </h3>
             <p className="text-white/90 text-base max-w-md">
@@ -47,7 +47,7 @@ export default function CtaTiles() {
         {/* Blue tile — Jobfinder */}
         <Link
           href="/jobfinder"
-          className="group relative overflow-hidden rounded-3xl p-10 min-h-[340px] flex flex-col justify-between no-underline bg-gradient-to-br from-[#0F71C3] via-[#1a8ad9] to-[#0a5da3] shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all"
+          className="group relative overflow-hidden rounded-3xl p-7 md:p-10 min-h-[280px] md:min-h-[340px] flex flex-col justify-between no-underline bg-gradient-to-br from-[#0F71C3] via-[#1a8ad9] to-[#0a5da3] shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all"
         >
           {/* Decorative shapes */}
           <div className="absolute -top-20 -right-20 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
@@ -68,7 +68,7 @@ export default function CtaTiles() {
             <div className="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full mb-4">
               Für Bewerber
             </div>
-            <h3 className="text-white text-4xl md:text-5xl font-semibold uppercase leading-[0.95] mb-3">
+            <h3 className="text-white text-3xl md:text-5xl font-semibold uppercase leading-[0.95] mb-3">
               Jobfinder<br />starten
             </h3>
             <p className="text-white/90 text-base max-w-md">

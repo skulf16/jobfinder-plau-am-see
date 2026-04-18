@@ -51,16 +51,16 @@ export default function JobsPreview() {
   const branchen = [...new Set(demoUnternehmen.map((u) => u.branche))];
 
   return (
-    <section id="jobs-preview" className="pt-48 pb-[calc(180px+10vh)] bg-white">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section id="jobs-preview" className="pt-32 md:pt-48 pb-[calc(100px+8vh)] md:pb-[calc(180px+10vh)] bg-white">
+      <div className="max-w-[1200px] mx-auto px-5 md:px-8">
         <div className="flex justify-between items-center mb-7 flex-wrap gap-3">
-          <h2 className="text-5xl font-semibold uppercase text-primary">
+          <h2 className="text-3xl md:text-5xl font-semibold uppercase text-primary">
             Aktuelle Stellenangebote
           </h2>
         </div>
 
         {/* Filters */}
-        <div className="flex gap-3 mb-6 flex-wrap items-center">
+        <div className="flex flex-col sm:flex-row gap-3 mb-6 sm:flex-wrap items-stretch sm:items-center">
           <select
             value={brFilter}
             onChange={(e) => { setBrFilter(e.target.value); setShowCount(5); }}
@@ -98,7 +98,7 @@ export default function JobsPreview() {
                   const c = demoUnternehmen.find((u) => u.id === j.firmaId);
                   if (c) setModalCompany(c);
                 }}
-                className="flex items-center gap-5 p-6 bg-white rounded-2xl border border-black/[0.06] hover:shadow-lg hover:border-transparent hover:-translate-y-0.5 transition-all cursor-pointer"
+                className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 bg-white rounded-2xl border border-black/[0.06] hover:shadow-lg hover:border-transparent hover:-translate-y-0.5 transition-all cursor-pointer"
               >
                 <div className="w-[52px] h-[52px] rounded-[14px] bg-primary/[0.08] text-primary flex items-center justify-center font-bold text-base shrink-0">
                   {j.initialen}
