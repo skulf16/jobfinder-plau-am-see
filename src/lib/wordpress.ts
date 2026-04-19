@@ -55,7 +55,7 @@ const NAME_ALIASES: Record<string, string> = {
 const LOGO_OVERRIDES: Record<string, string> = {
   wohnungsplauplaumbh:
     "https://wohnen-plau.de/wp-content/uploads/2026/03/wohnungsgesellschaft-plau-am-see-logo-1.png",
-  etlschmidtparternsteuerberatungscoplauamsee: "/logo-etl-schmidt-partner.png",
+  etlschmidtparternsteuerberatungsgesellschaftcoplauamsee: "/logo-etl-schmidt-partner.png",
   beechresortplauersee: "/logo-beech-resorts.svg",
 };
 
