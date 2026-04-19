@@ -828,6 +828,8 @@ export default function RegisterPage() {
   const [step, setStep] = useState(1);
   const [data, setData] = useState<FormData>(initialFormData);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const progress = (step / TOTAL_STEPS) * 100;
 
@@ -873,13 +875,36 @@ export default function RegisterPage() {
     }
   }
 
-  function handleSubmit() {
+  async function handleSubmit() {
+    if (submitting) return;
+    setSubmitting(true);
+    setSubmitError("");
+
+    // Backup in localStorage (falls Mail fehlschlägt kein Datenverlust)
     const existing = JSON.parse(
       localStorage.getItem("anmeldungen") || "[]"
     ) as FormData[];
     const entry = { ...data, submittedAt: new Date().toISOString() };
     localStorage.setItem("anmeldungen", JSON.stringify([...existing, entry]));
-    setSubmitted(true);
+
+    try {
+      const res = await fetch("/api/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) {
+        const j = await res.json().catch(() => ({}));
+        throw new Error(j.error || "Versand fehlgeschlagen");
+      }
+      setSubmitted(true);
+    } catch (e) {
+      setSubmitError(
+        e instanceof Error ? e.message : "Unbekannter Fehler beim Versand"
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   const renderStep = () => {
@@ -991,32 +1016,32 @@ export default function RegisterPage() {
               <div />
             )}
 
-            <button
-              type="button"
-              onClick={handleNext}
-              disabled={!canProceed()}
-              className={`flex items-center gap-2 px-8 py-3 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all cursor-pointer ${
-                canProceed()
-                  ? "bg-primary text-white hover:bg-primary-dark"
-                  : "bg-gray-100 text-gray-400 cursor-not-allowed"
-              }`}
-            >
-              {step === TOTAL_STEPS ? "Anmeldung absenden" : "Weiter"}
-              {step < TOTAL_STEPS && (
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
+            <div className="flex flex-col items-end gap-2">
+              <button
+                type="button"
+                onClick={handleNext}
+                disabled={!canProceed() || submitting}
+                className={`flex items-center gap-2 px-8 py-3 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+                  canProceed() && !submitting
+                    ? "bg-primary text-white hover:bg-primary-dark"
+                    : "bg-gray-100 text-gray-400 cursor-not-allowed"
+                }`}
+              >
+                {submitting
+                  ? "Wird gesendet…"
+                  : step === TOTAL_STEPS
+                  ? "Anmeldung absenden"
+                  : "Weiter"}
+                {step < TOTAL_STEPS && !submitting && (
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                )}
+              </button>
+              {submitError && (
+                <span className="text-xs text-red-500">{submitError}</span>
               )}
-            </button>
+            </div>
           </div>
         </div>
       </div>
