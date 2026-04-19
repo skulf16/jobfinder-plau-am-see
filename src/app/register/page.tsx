@@ -32,12 +32,14 @@ interface FormData {
   benefits: string[];
   eigeneBenefits: string[];
   // Step 8
+  stellenModus: "liste" | "url";
   stellen: JobEntry[];
   // Step 9
   unternehmensname: string;
   ansprechpartner: string;
   email: string;
   telefon: string;
+  bewerbungslink: string;
 }
 
 // ── Constants ──────────────────────────────────────────────────────────────────
@@ -571,9 +573,44 @@ function Step8({
         Ihre Stellen
       </h2>
       <p className="text-gray-500 text-sm mb-6">
-        Tragen Sie Ihre offenen Stellen ein
+        Wie möchten Sie Ihre Stellen anbieten?
       </p>
 
+      <div className="grid grid-cols-2 gap-4 mb-8">
+        <ChoiceCard
+          label="Stellen eintragen"
+          description="Einzelne Stellenangebote hier direkt eintragen"
+          active={data.stellenModus === "liste"}
+          onClick={() => setData({ ...data, stellenModus: "liste" })}
+        />
+        <ChoiceCard
+          label="Bewerbungsportal"
+          description="Link zu Ihrem eigenen Karriere-Portal"
+          active={data.stellenModus === "url"}
+          onClick={() => setData({ ...data, stellenModus: "url" })}
+        />
+      </div>
+
+      {data.stellenModus === "url" && (
+        <div>
+          <label className="block text-sm font-semibold text-dark mb-1.5">
+            Link zum Bewerbungsportal
+          </label>
+          <input
+            type="url"
+            placeholder="https://karriere.ihr-unternehmen.de"
+            value={data.bewerbungslink}
+            onChange={(e) => setData({ ...data, bewerbungslink: e.target.value })}
+            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary"
+          />
+          <p className="text-xs text-gray-500 mt-2">
+            Dieser Link wird am &quot;Jetzt bewerben&quot;-Button verlinkt.
+          </p>
+        </div>
+      )}
+
+      {data.stellenModus === "liste" && (
+      <>
       <div className="flex flex-col gap-4 mb-4">
         {data.stellen.map((stelle, idx) => (
           <div
@@ -637,6 +674,8 @@ function Step8({
       >
         + Weitere Stelle hinzufügen
       </button>
+      </>
+      )}
     </div>
   );
 }
@@ -776,11 +815,13 @@ const initialFormData: FormData = {
   faehigkeiten: [],
   benefits: [],
   eigeneBenefits: [],
+  stellenModus: "liste",
   stellen: [{ id: "init", titel: "", beschreibung: "", anstellungsart: "" }],
   unternehmensname: "",
   ansprechpartner: "",
   email: "",
   telefon: "",
+  bewerbungslink: "",
 };
 
 export default function RegisterPage() {
@@ -810,7 +851,9 @@ export default function RegisterPage() {
       case 7:
         return true; // benefits are optional
       case 8:
-        return data.stellen.some((s) => s.titel.trim() !== "");
+        return data.stellenModus === "url"
+          ? data.bewerbungslink.trim() !== ""
+          : data.stellen.some((s) => s.titel.trim() !== "");
       case 9:
         return (
           data.unternehmensname.trim() !== "" &&

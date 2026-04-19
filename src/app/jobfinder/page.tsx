@@ -607,7 +607,7 @@ export default function JobfinderPage() {
 
           {/* Result cards */}
           {results.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div className="flex flex-col gap-4 mb-8">
               {results.map((r) => (
                 <ResultCard key={r.job.id} result={r} />
               ))}
