@@ -6,7 +6,7 @@ export default function CtaTiles() {
       <div className="max-w-[1200px] mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         {/* Orange tile — Unternehmen registrieren */}
         <Link
-          href="/register"
+          href="/registrierung"
           className="group relative overflow-hidden rounded-3xl p-7 md:p-10 min-h-[280px] md:min-h-[340px] flex flex-col justify-between no-underline bg-gradient-to-br from-[#F97E1A] via-[#F59332] to-[#E06A10] shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all"
         >
           {/* Decorative shapes */}

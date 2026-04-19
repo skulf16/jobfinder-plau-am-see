@@ -25,7 +25,7 @@ export default function Footer() {
             <Link href="/jobfinder" className="block text-[13px] text-white/70 py-1 no-underline hover:text-primary transition-colors">
               Jobfinder
             </Link>
-            <Link href="/register" className="block text-[13px] text-white/70 py-1 no-underline hover:text-primary transition-colors">
+            <Link href="/registrierung" className="block text-[13px] text-white/70 py-1 no-underline hover:text-primary transition-colors">
               Für Arbeitgeber
             </Link>
           </div>

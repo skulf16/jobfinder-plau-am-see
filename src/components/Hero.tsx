@@ -22,7 +22,7 @@ export default function Hero() {
             </h1>
             <div className="flex gap-3 flex-wrap">
               <Link
-                href="/register"
+                href="/registrierung"
                 className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[15px] font-semibold uppercase tracking-wider bg-primary text-white no-underline hover:bg-primary-dark hover:-translate-y-0.5 hover:shadow-lg transition-all"
               >
                 Unternehmen registrieren

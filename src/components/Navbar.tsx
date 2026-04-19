@@ -65,7 +65,7 @@ export default function Navbar() {
               Zum Jobfinder
             </Link>
             <Link
-              href="/register"
+              href="/registrierung"
               className="bg-primary text-white! px-6 py-2.5 rounded-full text-sm font-semibold uppercase tracking-wider no-underline hover:bg-primary-dark transition-all"
             >
               Jetzt registrieren
@@ -96,7 +96,7 @@ export default function Navbar() {
           <Link href="/jobfinder" className="text-base font-medium text-gray-600 no-underline" onClick={() => setMobileOpen(false)}>
             Jobfinder
           </Link>
-          <Link href="/register" className="text-base font-medium text-gray-600 no-underline" onClick={() => setMobileOpen(false)}>
+          <Link href="/registrierung" className="text-base font-medium text-gray-600 no-underline" onClick={() => setMobileOpen(false)}>
             Für Arbeitgeber
           </Link>
         </div>
