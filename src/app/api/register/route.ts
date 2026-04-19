@@ -98,12 +98,12 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Pflichtfelder fehlen" }, { status: 400 });
     }
 
-    const host = process.env.SMTP_HOST;
-    const port = Number(process.env.SMTP_PORT || 587);
-    const user = process.env.SMTP_USER;
-    const pass = process.env.SMTP_PASS;
-    const from = process.env.SMTP_FROM || user;
-    const to = process.env.SMTP_TO || "support@jobplauamsee.de";
+    const host = process.env.SMTP_HOST?.trim();
+    const port = Number((process.env.SMTP_PORT || "587").trim());
+    const user = process.env.SMTP_USER?.trim();
+    const pass = process.env.SMTP_PASS; // do NOT trim — passwords may have intentional spaces
+    const from = process.env.SMTP_FROM?.trim() || user;
+    const to = process.env.SMTP_TO?.trim() || "support@jobplauamsee.de";
 
     if (!host || !user || !pass) {
       console.error("SMTP environment variables missing");
