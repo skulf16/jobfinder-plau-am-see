@@ -94,7 +94,7 @@ export default function JobsPreview({ companies }: { companies?: Company[] } = {
           <div className="space-y-3.5">
             {visible.map((j) => (
               <div
-                key={j.id}
+                key={`${j.firmaId}-${j.id}`}
                 onClick={() => {
                   const c = data.find((u) => u.id === j.firmaId);
                   if (c) setModalCompany(c);

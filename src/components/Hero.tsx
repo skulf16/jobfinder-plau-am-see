@@ -53,7 +53,7 @@ export default function Hero() {
               </div>
               <div>
                 <div className="font-semibold text-2xl text-primary">{stellenCount}</div>
-                <div className="text-[11px] text-white/50 mt-0.5">Offene Stellen</div>
+                <div className="text-[11px] text-white/50 mt-0.5">Stellenangebote</div>
               </div>
             </div>
           </div>

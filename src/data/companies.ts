@@ -1057,7 +1057,7 @@ export const companies: CompanyWithContact[] = [
     "stellenangebote": [],
     "benefits": [],
     "schnuppertage": false,
-    "aktiv": true
+    "aktiv": false
   },
   {
     "id": "28",

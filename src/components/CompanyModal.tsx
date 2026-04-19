@@ -93,7 +93,7 @@ export default function CompanyModal({
         <div className="h-px bg-gray-100 my-6" />
 
         <div>
-          <h3 className="text-xl font-semibold mb-3">Offene Stellen</h3>
+          <h3 className="text-xl font-semibold mb-3">Stellenangebote</h3>
           {company.stellenangebote.map((s) => (
             <div
               key={s.id}
