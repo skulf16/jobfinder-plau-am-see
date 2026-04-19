@@ -131,8 +131,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   } catch (e) {
     console.error("Registration email failed:", e);
+    const detail = e instanceof Error ? e.message : String(e);
     return NextResponse.json(
-      { error: "Versand fehlgeschlagen" },
+      { error: "Versand fehlgeschlagen", detail },
       { status: 500 }
     );
   }
