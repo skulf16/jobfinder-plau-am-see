@@ -12,6 +12,7 @@ interface JobEntry {
 }
 
 interface RegisterPayload {
+  website?: string; // Honeypot — must be empty
   suchkategorien: string[];
   branche: string;
   brancheSonstiges: string;
@@ -85,6 +86,12 @@ function buildHtml(d: RegisterPayload): string {
 export async function POST(request: Request) {
   try {
     const data = (await request.json()) as RegisterPayload;
+
+    // Honeypot: bots fill the hidden "website" field; silently accept but skip email
+    if (data.website && data.website.trim() !== "") {
+      console.warn("Honeypot triggered, silently dropping submission");
+      return NextResponse.json({ ok: true });
+    }
 
     // Validate essentials
     if (!data.unternehmensname?.trim() || !data.email?.trim()) {

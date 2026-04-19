@@ -830,6 +830,7 @@ export default function RegisterPage() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [honeypot, setHoneypot] = useState(""); // Anti-spam honeypot
 
   const progress = (step / TOTAL_STEPS) * 100;
 
@@ -891,7 +892,7 @@ export default function RegisterPage() {
       const res = await fetch("/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, website: honeypot }),
       });
       if (!res.ok) {
         const j = await res.json().catch(() => ({}));
@@ -989,6 +990,20 @@ export default function RegisterPage() {
 
           {/* Step content */}
           <div className="min-h-[280px]">{renderStep()}</div>
+
+          {/* Honeypot field — hidden from real users, bots fill it */}
+          <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px", height: 0, width: 0, overflow: "hidden" }}>
+            <label>
+              Website (bitte nicht ausfüllen)
+              <input
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+              />
+            </label>
+          </div>
 
           {/* Navigation */}
           <div className="mt-10 flex items-center justify-between gap-4">
