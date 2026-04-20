@@ -97,9 +97,11 @@ export default function CompanyGrid({ companies }: { companies?: Company[] } = {
                 <div className="font-bold text-[15px] text-dark leading-tight">{u.name}</div>
                 <div className="text-xs text-gray-400 -mt-1.5">{u.branche}</div>
                 <div className="flex flex-wrap gap-1.5 justify-center mt-auto pt-2">
-                  {u.anstellungsarten.map((a) => (
-                    <JobBadge key={a} type={a} />
-                  ))}
+                  {u.anstellungsarten
+                    .filter((a) => !["Vollzeit", "Teilzeit", "Minijob"].includes(a))
+                    .map((a) => (
+                      <JobBadge key={a} type={a} />
+                    ))}
                 </div>
               </div>
             ))}
