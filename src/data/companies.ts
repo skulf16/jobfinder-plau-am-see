@@ -1503,5 +1503,39 @@ export const companies: CompanyWithContact[] = [
     "schnuppertage": true,
     "aktiv": true,
     "logo": "/logos/parkhotel-klueschenberg.jpg"
+  },
+  {
+    "id": "38",
+    "name": "Lidl",
+    "branche": "Handel & Vertrieb",
+    "initialen": "L",
+    "adresse": "Plau am See",
+    "telefon": "+49 381 66691371",
+    "email": "Bewerbung.ros@lidl.de",
+    "website": "https://jobs.lidl.de",
+    "bewerbungslink": "https://jobs.lidl.de/suche?page=1&midpoint_name=Plau%20am%20See,%20Ludwigslust-Parchim&midpoint_lat=53.4601&midpoint_lon=12.2613&radius=25&sort_field=location.distance&sort_order=asc",
+    "ansprechpartner": "Kai Jungblut",
+    "anstellungsarten": [
+      "Festanstellung",
+      "Praktikum",
+      "Duales Studium",
+      "Ausbildung",
+      "Minijob",
+      "Teilzeit",
+      "Vollzeit",
+      "Boys & Girlsday"
+    ],
+    "stellenangebote": [],
+    "benefits": [
+      "Weiterbildung",
+      "Betriebliche Altersvorsorge",
+      "Gesundheitsangebote",
+      "Mitarbeiterrabatte",
+      "Teamevents",
+      "Urlaubs- & Weihnachtsgeld"
+    ],
+    "schnuppertage": false,
+    "aktiv": true,
+    "logo": "/logos/lidl.svg"
   }
 ];
