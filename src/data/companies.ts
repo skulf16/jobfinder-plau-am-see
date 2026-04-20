@@ -681,15 +681,40 @@ export const companies: CompanyWithContact[] = [
       "Ausbildung",
       "Ferienjob",
       "Festanstellung",
+      "Teilzeit",
       "Praktikum",
       "Praxislerntag"
     ],
     "stellenangebote": [
       {
         "id": "s_0",
-        "titel": "Fischwirt/Verkäufer Fischimbiss /Mitarbeiter Produktion",
+        "titel": "Fischwirt",
         "beschreibung": "",
         "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Verkäufer Fischimbiss",
+        "beschreibung": "",
+        "anstellungsart": "Ferienjob"
+      },
+      {
+        "id": "s_2",
+        "titel": "Verkäufer Fischimbiss",
+        "beschreibung": "",
+        "anstellungsart": "Teilzeit"
+      },
+      {
+        "id": "s_3",
+        "titel": "Mitarbeiter Produktion",
+        "beschreibung": "",
+        "anstellungsart": "Ferienjob"
+      },
+      {
+        "id": "s_4",
+        "titel": "Mitarbeiter Produktion",
+        "beschreibung": "",
+        "anstellungsart": "Festanstellung"
       }
     ],
     "benefits": [
