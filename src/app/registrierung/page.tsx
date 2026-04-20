@@ -285,7 +285,7 @@ function Step3({
         Schnuppertage
       </h2>
       <p className="text-gray-500 text-sm mb-6">
-        Bieten Sie Schnuppertage / Hospitationstage an?
+        Bieten Sie Schnuppertage / Praxislerntage an?
       </p>
       <div className="grid grid-cols-2 gap-4 mb-8">
         <ChoiceCard
