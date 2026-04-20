@@ -597,6 +597,12 @@ function Step8({
             </p>
           </div>
 
+          <div className="border-t border-gray-100 pt-6">
+            <p className="text-sm text-gray-600 mb-5 font-medium">
+              Allgemeine Informationen um Sie in unserem Jobfinder zu listen.
+            </p>
+          </div>
+
           <div>
             <h3 className="font-semibold text-dark mb-3 text-sm uppercase tracking-wide">
               Arbeitszeiten
