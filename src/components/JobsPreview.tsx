@@ -72,19 +72,6 @@ export default function JobsPreview({ companies }: { companies?: Company[] } = {
 
         {/* Filters */}
         <div className="flex flex-col sm:flex-row gap-3 mb-6 sm:flex-wrap items-stretch sm:items-center">
-          <div className="relative flex-1 min-w-[200px]">
-            <svg className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="11" cy="11" r="8" />
-              <path d="M21 21l-4.35-4.35" />
-            </svg>
-            <input
-              type="search"
-              value={searchTerm}
-              onChange={(e) => { setSearchTerm(e.target.value); setShowCount(5); }}
-              placeholder="Suchen…"
-              className="w-full border-[1.5px] border-gray-200 rounded-2xl py-2.5 pl-11 pr-4 text-sm text-gray-700 bg-gray-50 outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all"
-            />
-          </div>
           <select
             value={brFilter}
             onChange={(e) => { setBrFilter(e.target.value); setShowCount(5); }}
@@ -108,6 +95,19 @@ export default function JobsPreview({ companies }: { companies?: Company[] } = {
           <span className="text-[13px] text-gray-400 bg-gray-100 px-3.5 py-1.5 rounded-full">
             {filtered.length} Stellen
           </span>
+          <div className="relative sm:ml-auto sm:w-[180px]">
+            <svg className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.35-4.35" />
+            </svg>
+            <input
+              type="search"
+              value={searchTerm}
+              onChange={(e) => { setSearchTerm(e.target.value); setShowCount(5); }}
+              placeholder="Suchen…"
+              className="w-full border-[1.5px] border-gray-200 rounded-2xl py-2 pl-9 pr-3 text-[13px] text-gray-700 bg-gray-50 outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all"
+            />
+          </div>
         </div>
 
         {/* Job Cards */}
