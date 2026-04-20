@@ -9,6 +9,7 @@ export default function CompanyGrid({ companies }: { companies?: Company[] } = {
   const data = companies && companies.length > 0 ? companies : demoUnternehmen;
   const [brFilter, setBrFilter] = useState("");
   const [artFilter, setArtFilter] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const [modalCompany, setModalCompany] = useState<Company | null>(null);
 
   const active = data.filter((u) => u.aktiv);
@@ -23,8 +24,17 @@ export default function CompanyGrid({ companies }: { companies?: Company[] } = {
           u.anstellungsarten.includes(artFilter) ||
           u.stellenangebote.some((s) => s.anstellungsart === artFilter)
       );
+    if (searchTerm.trim()) {
+      const q = searchTerm.trim().toLowerCase();
+      f = f.filter(
+        (u) =>
+          u.name.toLowerCase().includes(q) ||
+          u.branche.toLowerCase().includes(q) ||
+          u.stellenangebote.some((s) => s.titel.toLowerCase().includes(q))
+      );
+    }
     return f;
-  }, [active, brFilter, artFilter]);
+  }, [active, brFilter, artFilter, searchTerm]);
 
   return (
     <section
@@ -36,6 +46,21 @@ export default function CompanyGrid({ companies }: { companies?: Company[] } = {
           <h2 className="text-3xl md:text-5xl font-semibold uppercase text-white">
             Unternehmen in Plau am See
           </h2>
+        </div>
+
+        {/* Search */}
+        <div className="relative mb-4">
+          <svg className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+          <input
+            type="search"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Unternehmen oder Stelle suchen..."
+            className="w-full border-[1.5px] border-white/20 rounded-2xl py-3 pl-12 pr-4 text-sm text-gray-700 bg-white outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
+          />
         </div>
 
         {/* Filters */}

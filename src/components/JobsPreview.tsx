@@ -20,6 +20,7 @@ export default function JobsPreview({ companies }: { companies?: Company[] } = {
   const data = companies && companies.length > 0 ? companies : demoUnternehmen;
   const [brFilter, setBrFilter] = useState("");
   const [artFilter, setArtFilter] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const [showCount, setShowCount] = useState(5);
   const [modalCompany, setModalCompany] = useState<Company | null>(null);
 
@@ -45,8 +46,17 @@ export default function JobsPreview({ companies }: { companies?: Company[] } = {
     let f = allJobs;
     if (brFilter) f = f.filter((j) => j.branche === brFilter);
     if (artFilter) f = f.filter((j) => j.anstellungsart === artFilter);
+    if (searchTerm.trim()) {
+      const q = searchTerm.trim().toLowerCase();
+      f = f.filter(
+        (j) =>
+          j.firma.toLowerCase().includes(q) ||
+          j.titel.toLowerCase().includes(q) ||
+          j.branche.toLowerCase().includes(q)
+      );
+    }
     return f;
-  }, [allJobs, brFilter, artFilter]);
+  }, [allJobs, brFilter, artFilter, searchTerm]);
 
   const visible = filtered.slice(0, showCount);
   const branchen = [...new Set(data.map((u) => u.branche))];
@@ -58,6 +68,21 @@ export default function JobsPreview({ companies }: { companies?: Company[] } = {
           <h2 className="text-3xl md:text-5xl font-semibold uppercase text-primary">
             Aktuelle Stellenangebote
           </h2>
+        </div>
+
+        {/* Search */}
+        <div className="relative mb-4">
+          <svg className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+          <input
+            type="search"
+            value={searchTerm}
+            onChange={(e) => { setSearchTerm(e.target.value); setShowCount(5); }}
+            placeholder="Unternehmen oder Stelle suchen..."
+            className="w-full border-[1.5px] border-gray-200 rounded-2xl py-3 pl-12 pr-4 text-sm text-gray-700 bg-white outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
+          />
         </div>
 
         {/* Filters */}
