@@ -596,7 +596,13 @@ export const companies: CompanyWithContact[] = [
     "stellenangebote": [
       {
         "id": "s_0",
-        "titel": "Kommunale Verwaltung / Kinderbetreuung kommunaler Hort",
+        "titel": "Kommunale Verwaltung",
+        "beschreibung": "",
+        "anstellungsart": "Ausbildung"
+      },
+      {
+        "id": "s_1",
+        "titel": "Kinderbetreuung kommunaler Hort",
         "beschreibung": "",
         "anstellungsart": "Ausbildung"
       }
