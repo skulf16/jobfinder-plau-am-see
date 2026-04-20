@@ -314,13 +314,13 @@ function Step3({
       <div className="grid grid-cols-2 gap-4">
         <ChoiceCard
           label="Ja"
-          description="Wir nehmen am Boys & Girlsday teil"
+          description="Wir nehmen am Boys & Girls Day teil"
           active={data.boysGirlsday === true}
           onClick={() => setData({ ...data, boysGirlsday: true })}
         />
         <ChoiceCard
           label="Nein"
-          description="Wir nehmen nicht am Boys & Girlsday teil"
+          description="Wir nehmen nicht am Boys & Girls Day teil"
           active={data.boysGirlsday === false}
           onClick={() => setData({ ...data, boysGirlsday: false })}
         />

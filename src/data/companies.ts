@@ -121,7 +121,7 @@ export const companies: CompanyWithContact[] = [
     "bewerbungslink": "",
     "ansprechpartner": "Katharina Krause",
     "anstellungsarten": [
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Festanstellung",
       "Praxislerntag",
       "Minijob",
@@ -248,7 +248,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Yvonne Kuhring",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Festanstellung",
       "Praktikum"
     ],
@@ -346,7 +346,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Timo Weisbrich",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Duales Studium",
       "Ferienjob",
       "Festanstellung",
@@ -551,7 +551,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Steffen Steinhäuser",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Festanstellung",
       "Praxislerntag"
     ],
@@ -668,7 +668,7 @@ export const companies: CompanyWithContact[] = [
     "bewerbungslink": "",
     "ansprechpartner": "Claudia Poser",
     "anstellungsarten": [
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Festanstellung",
       "Praktikum",
       "Praxislerntag"
@@ -762,7 +762,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Carmen Schuldt",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Ferienjob",
       "Festanstellung",
       "Praktikum",
@@ -798,7 +798,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Christoph Frick",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Ferienjob",
       "Festanstellung",
       "Praktikum",
@@ -838,7 +838,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Frau Kemnitz",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Duales Studium",
       "Ferienjob",
       "Festanstellung",
@@ -895,7 +895,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Rebekka Jaroß",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Festanstellung",
       "Praktikum"
     ],
@@ -1022,7 +1022,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Hannes Behrens/ Heidi Schaumkessel",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Ferienjob",
       "Festanstellung",
       "Praktikum"
@@ -1154,7 +1154,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Angie Schröder",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Festanstellung",
       "Praktikum",
       "Praxislerntag"
@@ -1215,7 +1215,7 @@ export const companies: CompanyWithContact[] = [
     "ansprechpartner": "Markus von Jan",
     "anstellungsarten": [
       "Ausbildung",
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Ferienjob",
       "Festanstellung",
       "Praktikum",
@@ -1405,7 +1405,7 @@ export const companies: CompanyWithContact[] = [
     "bewerbungslink": "",
     "ansprechpartner": "Bianka Moldenhauer",
     "anstellungsarten": [
-      "Boys & Girlsday",
+      "Boys & Girls Day",
       "Ferienjob",
       "Praktikum",
       "Minijob",
@@ -1523,7 +1523,7 @@ export const companies: CompanyWithContact[] = [
       "Minijob",
       "Teilzeit",
       "Vollzeit",
-      "Boys & Girlsday"
+      "Boys & Girls Day"
     ],
     "stellenangebote": [],
     "benefits": [

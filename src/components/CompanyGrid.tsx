@@ -66,7 +66,7 @@ export default function CompanyGrid({ companies }: { companies?: Company[] } = {
             className="border-[1.5px] border-white/20 rounded-2xl py-2.5 px-4 pr-10 min-w-[220px] text-sm text-gray-600 bg-white outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 appearance-none bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%3E%3Cpath%20d%3D%22M1%201l5%205%205-5%22%20stroke%3D%22%23999%22%20stroke-width%3D%222%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_14px_center] transition-all"
           >
             <option value="">Alle Anstellungsarten</option>
-            {["Festanstellung","Vollzeit","Teilzeit","Minijob","Ausbildung","Duales Studium","Praktikum","Ferienjob","Boys & Girlsday","Praxislerntag"].map((a) => (
+            {["Festanstellung","Vollzeit","Teilzeit","Minijob","Ausbildung","Duales Studium","Praktikum","Ferienjob","Boys & Girls Day","Praxislerntag"].map((a) => (
               <option key={a}>{a}</option>
             ))}
           </select>
@@ -127,10 +127,10 @@ export default function CompanyGrid({ companies }: { companies?: Company[] } = {
                     .map((a) => (
                       <JobBadge key={a} type={a} />
                     ))}
-                  {u.anstellungsarten.includes("Boys & Girlsday") && (
+                  {u.anstellungsarten.includes("Boys & Girls Day") && (
                     <span className="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#F97E1A]/10 text-[#F97E1A] uppercase tracking-wider">
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                      Boys &amp; Girlsday
+                      Boys &amp; Girls Day
                     </span>
                   )}
                 </div>
