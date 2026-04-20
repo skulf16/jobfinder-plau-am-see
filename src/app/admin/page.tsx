@@ -16,24 +16,20 @@ export default function AdminPage() {
   const [anmeldungen, setAnmeldungen] = useState<Record<string, unknown>[]>([]);
 
   useEffect(() => {
-    const stored = localStorage.getItem("unternehmen");
-    // Use CSV-imported companies as source of truth; fall back to stored admin overrides
-    if (stored) {
-      try {
-        const storedData = JSON.parse(stored) as Company[];
-        // If localStorage has fewer entries than current data, use current data
-        if (storedData.length >= allCompanies.length) {
-          setUnternehmen(storedData);
-        } else {
-          setUnternehmen(allCompanies as Company[]);
-          localStorage.setItem("unternehmen", JSON.stringify(allCompanies));
-        }
-      } catch {
-        setUnternehmen(allCompanies as Company[]);
-      }
-    } else {
-      setUnternehmen(allCompanies as Company[]);
-    }
+    // Always use the companies.ts list as source of truth.
+    // Only preserve the `aktiv` state override from localStorage (so admin toggles survive).
+    const base = allCompanies as Company[];
+    let overrides: Record<string, boolean> = {};
+    try {
+      const stored = localStorage.getItem("unternehmen_aktiv_overrides");
+      if (stored) overrides = JSON.parse(stored);
+    } catch {}
+    const merged = base.map((c) => ({
+      ...c,
+      aktiv: c.id in overrides ? overrides[c.id] : c.aktiv,
+    }));
+    setUnternehmen(merged);
+
     const storedAn = localStorage.getItem("anmeldungen");
     setAnmeldungen(storedAn ? JSON.parse(storedAn) : []);
   }, []);
@@ -43,17 +39,24 @@ export default function AdminPage() {
     else setError(true);
   };
 
+  const persistOverrides = (list: Company[]) => {
+    const overrides: Record<string, boolean> = {};
+    list.forEach((c) => { overrides[c.id] = c.aktiv; });
+    localStorage.setItem("unternehmen_aktiv_overrides", JSON.stringify(overrides));
+  };
+
   const toggleActive = (id: string) => {
     const updated = unternehmen.map((u) => u.id === id ? { ...u, aktiv: !u.aktiv } : u);
     setUnternehmen(updated);
-    localStorage.setItem("unternehmen", JSON.stringify(updated));
+    persistOverrides(updated);
   };
 
   const deleteCompany = (id: string) => {
-    if (!confirm("Wirklich löschen?")) return;
-    const updated = unternehmen.filter((u) => u.id !== id);
+    if (!confirm("Dieses Unternehmen wird nur lokal ausgeblendet (deaktiviert).\nFortfahren?")) return;
+    // Soft delete: just deactivate
+    const updated = unternehmen.map((u) => u.id === id ? { ...u, aktiv: false } : u);
     setUnternehmen(updated);
-    localStorage.setItem("unternehmen", JSON.stringify(updated));
+    persistOverrides(updated);
   };
 
   const allStellen = unternehmen.flatMap((u) =>
