@@ -1358,7 +1358,6 @@ export const companies: CompanyWithContact[] = [
     "anstellungsarten": [
       "Boys & Girlsday",
       "Ferienjob",
-      "Festanstellung",
       "Praktikum",
       "Minijob",
       "Teilzeit"
@@ -1368,7 +1367,13 @@ export const companies: CompanyWithContact[] = [
         "id": "s_0",
         "titel": "Pavillon",
         "beschreibung": "",
-        "anstellungsart": "Festanstellung"
+        "anstellungsart": "Minijob"
+      },
+      {
+        "id": "s_1",
+        "titel": "Pavillon",
+        "beschreibung": "",
+        "anstellungsart": "Teilzeit"
       }
     ],
     "benefits": [],
