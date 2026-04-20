@@ -70,23 +70,21 @@ export default function JobsPreview({ companies }: { companies?: Company[] } = {
           </h2>
         </div>
 
-        {/* Search */}
-        <div className="relative mb-4">
-          <svg className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <circle cx="11" cy="11" r="8" />
-            <path d="M21 21l-4.35-4.35" />
-          </svg>
-          <input
-            type="search"
-            value={searchTerm}
-            onChange={(e) => { setSearchTerm(e.target.value); setShowCount(5); }}
-            placeholder="Unternehmen oder Stelle suchen..."
-            className="w-full border-[1.5px] border-gray-200 rounded-2xl py-3 pl-12 pr-4 text-sm text-gray-700 bg-white outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
-          />
-        </div>
-
         {/* Filters */}
         <div className="flex flex-col sm:flex-row gap-3 mb-6 sm:flex-wrap items-stretch sm:items-center">
+          <div className="relative flex-1 min-w-[200px]">
+            <svg className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.35-4.35" />
+            </svg>
+            <input
+              type="search"
+              value={searchTerm}
+              onChange={(e) => { setSearchTerm(e.target.value); setShowCount(5); }}
+              placeholder="Suchen…"
+              className="w-full border-[1.5px] border-gray-200 rounded-2xl py-2.5 pl-11 pr-4 text-sm text-gray-700 bg-gray-50 outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/10 transition-all"
+            />
+          </div>
           <select
             value={brFilter}
             onChange={(e) => { setBrFilter(e.target.value); setShowCount(5); }}
