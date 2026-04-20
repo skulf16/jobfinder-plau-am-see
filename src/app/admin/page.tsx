@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { demoUnternehmen, type Company } from "@/data";
+import { type Company } from "@/data";
+import { companies as allCompanies } from "@/data/companies";
 
 const ADMIN_PW = "admin2024";
 
@@ -16,7 +17,23 @@ export default function AdminPage() {
 
   useEffect(() => {
     const stored = localStorage.getItem("unternehmen");
-    setUnternehmen(stored ? JSON.parse(stored) : demoUnternehmen);
+    // Use CSV-imported companies as source of truth; fall back to stored admin overrides
+    if (stored) {
+      try {
+        const storedData = JSON.parse(stored) as Company[];
+        // If localStorage has fewer entries than current data, use current data
+        if (storedData.length >= allCompanies.length) {
+          setUnternehmen(storedData);
+        } else {
+          setUnternehmen(allCompanies as Company[]);
+          localStorage.setItem("unternehmen", JSON.stringify(allCompanies));
+        }
+      } catch {
+        setUnternehmen(allCompanies as Company[]);
+      }
+    } else {
+      setUnternehmen(allCompanies as Company[]);
+    }
     const storedAn = localStorage.getItem("anmeldungen");
     setAnmeldungen(storedAn ? JSON.parse(storedAn) : []);
   }, []);
