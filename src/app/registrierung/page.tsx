@@ -50,6 +50,7 @@ const SUCHKATEGORIEN = [
   "Duale Studenten",
   "Praktikanten",
   "Ferienjobber",
+  "Minijobber",
   "Praxislerntag",
 ];
 
@@ -114,7 +115,7 @@ const ANSTELLUNGSARTEN = [
   "Ferienjob",
 ];
 
-const TOTAL_STEPS = 9;
+const TOTAL_STEPS = 8;
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
@@ -795,7 +796,6 @@ const STEP_TITLES = [
   "Was suchen Sie?",
   "Ihre Branche",
   "Schnuppertage",
-  "Arbeitszeit-Modelle",
   "Arbeitszeiten",
   "Arbeitsmodell & Fähigkeiten",
   "Ihre Benefits",
@@ -846,18 +846,16 @@ export default function RegisterPage() {
       case 3:
         return data.schnuppertage !== null && data.boysGirlsday !== null;
       case 4:
-        return data.arbeitszeitModelle.length > 0;
-      case 5:
         return data.arbeitszeiten.length > 0;
-      case 6:
+      case 5:
         return data.arbeitsmodell.length > 0;
-      case 7:
+      case 6:
         return true; // benefits are optional
-      case 8:
+      case 7:
         return data.stellenModus === "url"
           ? data.bewerbungslink.trim() !== ""
           : data.stellen.some((s) => s.titel.trim() !== "");
-      case 9:
+      case 8:
         return (
           data.unternehmensname.trim() !== "" &&
           data.ansprechpartner.trim() !== "" &&
@@ -917,16 +915,14 @@ export default function RegisterPage() {
       case 3:
         return <Step3 data={data} setData={setData} />;
       case 4:
-        return <Step4 data={data} setData={setData} />;
-      case 5:
         return <Step5 data={data} setData={setData} />;
-      case 6:
+      case 5:
         return <Step6 data={data} setData={setData} />;
-      case 7:
+      case 6:
         return <Step7 data={data} setData={setData} />;
-      case 8:
+      case 7:
         return <Step8 data={data} setData={setData} />;
-      case 9:
+      case 8:
         return <Step9 data={data} setData={setData} />;
       default:
         return null;
