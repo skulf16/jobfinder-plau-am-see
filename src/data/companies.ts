@@ -256,11 +256,7 @@ export const companies: CompanyWithContact[] = [
     ],
     "benefits": [
       "Urlaubs & Weihnachtsgeld",
-      "2 urlaubsfreie Tage (24",
-      "12",
-      "und 31",
-      "12",
-      ")",
+      "2 urlaubsfreie Tage (24.12. und 31.12.)",
       "kostenfreie Mittagsverpflegung",
       "1x jährlich großes Betriebsfest"
     ],
@@ -1170,24 +1166,18 @@ export const companies: CompanyWithContact[] = [
     "stellenangebote": [
       {
         "id": "s_0",
-        "titel": "Pflegebereich (Tagespflege",
+        "titel": "Pflegebereich (Tagespflege, Ambulanter Pflegedienst)",
         "beschreibung": "",
         "anstellungsart": "Ausbildung"
       },
       {
         "id": "s_1",
-        "titel": "Ambulanter Pflegedienst)",
-        "beschreibung": "",
-        "anstellungsart": "Ausbildung"
-      },
-      {
-        "id": "s_2",
         "titel": "Kita (Erzieher etc.)",
         "beschreibung": "",
         "anstellungsart": "Ausbildung"
       },
       {
-        "id": "s_3",
+        "id": "s_2",
         "titel": "Koch/Köchin für Kantine/Großküche",
         "beschreibung": "",
         "anstellungsart": "Ausbildung"
@@ -1195,11 +1185,7 @@ export const companies: CompanyWithContact[] = [
     ],
     "benefits": [
       "Jahressonderzahlung",
-      "30 Tage Urlaub / 24",
-      "12",
-      "und 31",
-      "12",
-      "frei",
+      "30 Tage Urlaub / 24.12. und 31.12. frei",
       "betriebliche Altersvorsorge",
       "Verdienst nach TVöD (Pflegebereich und Kita)",
       "kostengünstigere Mitgliedschaft im Fitnessstudio",
