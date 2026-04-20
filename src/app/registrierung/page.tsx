@@ -115,7 +115,7 @@ const ANSTELLUNGSARTEN = [
   "Ferienjob",
 ];
 
-const TOTAL_STEPS = 8;
+const TOTAL_STEPS = 7;
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
@@ -401,50 +401,24 @@ function Step6({
   return (
     <div className="animate-fade-in">
       <h2 className="text-2xl font-bold text-dark mb-2">
-        Arbeitsmodell & Fähigkeiten
+        Gesuchte Fähigkeiten
       </h2>
       <p className="text-gray-500 text-sm mb-6">Mehrfachauswahl möglich</p>
 
-      <div className="mb-6">
-        <h3 className="font-semibold text-dark mb-3 text-sm uppercase tracking-wide">
-          Arbeitsmodell
-        </h3>
-        <div className="flex flex-wrap gap-3">
-          {ARBEITSMODELLE.map((m) => (
-            <ToggleButton
-              key={m}
-              label={m}
-              active={data.arbeitsmodell.includes(m)}
-              onClick={() =>
-                setData({
-                  ...data,
-                  arbeitsmodell: toggleItem(data.arbeitsmodell, m),
-                })
-              }
-            />
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <h3 className="font-semibold text-dark mb-3 text-sm uppercase tracking-wide">
-          Gesuchte Fähigkeiten
-        </h3>
-        <div className="flex flex-wrap gap-3">
-          {FAEHIGKEITEN.map((f) => (
-            <ToggleButton
-              key={f}
-              label={f}
-              active={data.faehigkeiten.includes(f)}
-              onClick={() =>
-                setData({
-                  ...data,
-                  faehigkeiten: toggleItem(data.faehigkeiten, f),
-                })
-              }
-            />
-          ))}
-        </div>
+      <div className="flex flex-wrap gap-3">
+        {FAEHIGKEITEN.map((f) => (
+          <ToggleButton
+            key={f}
+            label={f}
+            active={data.faehigkeiten.includes(f)}
+            onClick={() =>
+              setData({
+                ...data,
+                faehigkeiten: toggleItem(data.faehigkeiten, f),
+              })
+            }
+          />
+        ))}
       </div>
     </div>
   );
@@ -593,20 +567,64 @@ function Step8({
       </div>
 
       {data.stellenModus === "url" && (
-        <div>
-          <label className="block text-sm font-semibold text-dark mb-1.5">
-            Link zum Bewerbungsportal
-          </label>
-          <input
-            type="url"
-            placeholder="https://karriere.ihr-unternehmen.de"
-            value={data.bewerbungslink}
-            onChange={(e) => setData({ ...data, bewerbungslink: e.target.value })}
-            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary"
-          />
-          <p className="text-xs text-gray-500 mt-2">
-            Dieser Link wird am &quot;Jetzt bewerben&quot;-Button verlinkt.
-          </p>
+        <div className="flex flex-col gap-6">
+          <div>
+            <label className="block text-sm font-semibold text-dark mb-1.5">
+              Link zum Bewerbungsportal
+            </label>
+            <input
+              type="url"
+              placeholder="https://karriere.ihr-unternehmen.de"
+              value={data.bewerbungslink}
+              onChange={(e) => setData({ ...data, bewerbungslink: e.target.value })}
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary"
+            />
+            <p className="text-xs text-gray-500 mt-2">
+              Dieser Link wird am &quot;Jetzt bewerben&quot;-Button verlinkt.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-dark mb-3 text-sm uppercase tracking-wide">
+              Arbeitszeiten
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {ARBEITSZEITEN.map((z) => (
+                <ToggleButton
+                  key={z}
+                  label={z}
+                  active={data.arbeitszeiten.includes(z)}
+                  onClick={() =>
+                    setData({
+                      ...data,
+                      arbeitszeiten: toggleItem(data.arbeitszeiten, z),
+                    })
+                  }
+                />
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-dark mb-3 text-sm uppercase tracking-wide">
+              Arbeitsmodell
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {ARBEITSMODELLE.map((m) => (
+                <ToggleButton
+                  key={m}
+                  label={m}
+                  active={data.arbeitsmodell.includes(m)}
+                  onClick={() =>
+                    setData({
+                      ...data,
+                      arbeitsmodell: toggleItem(data.arbeitsmodell, m),
+                    })
+                  }
+                />
+              ))}
+            </div>
+          </div>
         </div>
       )}
 
@@ -796,8 +814,7 @@ const STEP_TITLES = [
   "Was suchen Sie?",
   "Ihre Branche",
   "Schnuppertage",
-  "Arbeitszeiten",
-  "Arbeitsmodell & Fähigkeiten",
+  "Gesuchte Fähigkeiten",
   "Ihre Benefits",
   "Ihre Stellen",
   "Kontaktdaten",
@@ -846,16 +863,14 @@ export default function RegisterPage() {
       case 3:
         return data.schnuppertage !== null && data.boysGirlsday !== null;
       case 4:
-        return data.arbeitszeiten.length > 0;
+        return true; // Fähigkeiten optional
       case 5:
-        return data.arbeitsmodell.length > 0;
-      case 6:
         return true; // benefits are optional
-      case 7:
+      case 6:
         return data.stellenModus === "url"
           ? data.bewerbungslink.trim() !== ""
           : data.stellen.some((s) => s.titel.trim() !== "");
-      case 8:
+      case 7:
         return (
           data.unternehmensname.trim() !== "" &&
           data.ansprechpartner.trim() !== "" &&
@@ -915,14 +930,12 @@ export default function RegisterPage() {
       case 3:
         return <Step3 data={data} setData={setData} />;
       case 4:
-        return <Step5 data={data} setData={setData} />;
-      case 5:
         return <Step6 data={data} setData={setData} />;
-      case 6:
+      case 5:
         return <Step7 data={data} setData={setData} />;
-      case 7:
+      case 6:
         return <Step8 data={data} setData={setData} />;
-      case 8:
+      case 7:
         return <Step9 data={data} setData={setData} />;
       default:
         return null;
