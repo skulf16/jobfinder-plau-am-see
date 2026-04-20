@@ -10,6 +10,8 @@ interface JobEntry {
   titel: string;
   beschreibung: string;
   anstellungsart: string;
+  arbeitsmodell: string;
+  arbeitszeiten: string[];
 }
 
 interface FormData {
@@ -524,7 +526,7 @@ function Step8({
       ...data,
       stellen: [
         ...data.stellen,
-        { id: uid(), titel: "", beschreibung: "", anstellungsart: "" },
+        { id: uid(), titel: "", beschreibung: "", anstellungsart: "", arbeitsmodell: "", arbeitszeiten: [] },
       ],
     });
   }
@@ -538,6 +540,17 @@ function Step8({
       ...data,
       stellen: data.stellen.map((s) =>
         s.id === id ? { ...s, [field]: value } : s
+      ),
+    });
+  }
+
+  function toggleStelleArbeitszeit(id: string, value: string) {
+    setData({
+      ...data,
+      stellen: data.stellen.map((s) =>
+        s.id === id
+          ? { ...s, arbeitszeiten: toggleItem(s.arbeitszeiten, value) }
+          : s
       ),
     });
   }
@@ -681,6 +694,50 @@ function Step8({
                   </option>
                 ))}
               </select>
+
+              <div>
+                <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                  Arbeitsmodell
+                </label>
+                <div className="flex flex-wrap gap-2">
+                  {ARBEITSMODELLE.map((m) => (
+                    <button
+                      key={m}
+                      type="button"
+                      onClick={() => updateStelle(stelle.id, "arbeitsmodell", stelle.arbeitsmodell === m ? "" : m)}
+                      className={`px-4 py-1.5 rounded-xl text-sm font-medium border transition-all ${
+                        stelle.arbeitsmodell === m
+                          ? "border-primary bg-primary/5 text-primary-dark"
+                          : "border-gray-200 bg-white text-gray-700 hover:border-primary/50"
+                      }`}
+                    >
+                      {m}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                  Arbeitszeiten
+                </label>
+                <div className="flex flex-wrap gap-2">
+                  {ARBEITSZEITEN.map((z) => (
+                    <button
+                      key={z}
+                      type="button"
+                      onClick={() => toggleStelleArbeitszeit(stelle.id, z)}
+                      className={`px-4 py-1.5 rounded-xl text-sm font-medium border transition-all ${
+                        stelle.arbeitszeiten.includes(z)
+                          ? "border-primary bg-primary/5 text-primary-dark"
+                          : "border-gray-200 bg-white text-gray-700 hover:border-primary/50"
+                      }`}
+                    >
+                      {z}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         ))}
@@ -833,7 +890,7 @@ const initialFormData: FormData = {
   benefits: [],
   eigeneBenefits: [],
   stellenModus: "liste",
-  stellen: [{ id: "init", titel: "", beschreibung: "", anstellungsart: "" }],
+  stellen: [{ id: "init", titel: "", beschreibung: "", anstellungsart: "", arbeitsmodell: "", arbeitszeiten: [] }],
   unternehmensname: "",
   ansprechpartner: "",
   email: "",
