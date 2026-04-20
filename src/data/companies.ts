@@ -74,7 +74,8 @@ export const companies: CompanyWithContact[] = [
       "modern ausgestatette Arbeitsplätze"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/etl-schmidt-und-partern-gmbh-steuerberatungsgesellschaft-und.png"
   },
   {
     "id": "3",
@@ -105,7 +106,8 @@ export const companies: CompanyWithContact[] = [
       "Übernahmegarantie (Azubis)"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/febe-bau-gmbh.png"
   },
   {
     "id": "4",
@@ -158,7 +160,8 @@ export const companies: CompanyWithContact[] = [
       "Weiterbildungsbudget"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/deutsche-proventus-ag.svg"
   },
   {
     "id": "5",
@@ -175,7 +178,8 @@ export const companies: CompanyWithContact[] = [
     "stellenangebote": [],
     "benefits": [],
     "schnuppertage": false,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/kindertagesstaette-zwergenparadies.webp"
   },
   {
     "id": "6",
@@ -210,7 +214,8 @@ export const companies: CompanyWithContact[] = [
       "Sonderzahlung (Bonus)"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/bauservice-und-transporte-tschiersch-seehafer.png"
   },
   {
     "id": "7",
@@ -227,7 +232,8 @@ export const companies: CompanyWithContact[] = [
     "stellenangebote": [],
     "benefits": [],
     "schnuppertage": false,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/wifoeg-swm.png"
   },
   {
     "id": "8",
@@ -261,7 +267,8 @@ export const companies: CompanyWithContact[] = [
       "1x jährlich großes Betriebsfest"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/kita-bunte-stifte.png"
   },
   {
     "id": "9",
@@ -292,7 +299,8 @@ export const companies: CompanyWithContact[] = [
       "Eis :-)"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/eiscafe-al-ponte.png"
   },
   {
     "id": "10",
@@ -322,7 +330,8 @@ export const companies: CompanyWithContact[] = [
       "Übernahmegarantie (Azubis)"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/bauunternehmen-ahrens.jpg"
   },
   {
     "id": "11",
@@ -380,7 +389,8 @@ export const companies: CompanyWithContact[] = [
       "Folgen"
     ],
     "schnuppertage": false,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/ferienpark-heidenholz-und-aparthotel-am-see.jpg"
   },
   {
     "id": "12",
@@ -445,7 +455,8 @@ export const companies: CompanyWithContact[] = [
       "Jeden Monat einen Tankgutschein"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/ganzlin-beschichtungspulver-gmbh.png"
   },
   {
     "id": "13",
@@ -480,7 +491,8 @@ export const companies: CompanyWithContact[] = [
       "Urlaubs & Weihnachtsgeld"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/lenk-kuechendesign-und-montageservice.png"
   },
   {
     "id": "14",
@@ -523,7 +535,8 @@ export const companies: CompanyWithContact[] = [
       "Erholungsbeihilfe und vieles mehr"
     ],
     "schnuppertage": false,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/vr-bank-mecklenburg-eg.jpg"
   },
   {
     "id": "15",
@@ -575,7 +588,8 @@ export const companies: CompanyWithContact[] = [
       "Erholungsbeihilfe"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/steuerberater-steffen-steinhaeuser.png"
   },
   {
     "id": "16",
@@ -612,7 +626,8 @@ export const companies: CompanyWithContact[] = [
       "Urlaubs & Weihnachtsgeld"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/stadt-plau-am-see.png"
   },
   {
     "id": "17",
@@ -638,7 +653,8 @@ export const companies: CompanyWithContact[] = [
     ],
     "benefits": [],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/ms-zeltbau-und-partyservice.png"
   },
   {
     "id": "18",
@@ -670,7 +686,8 @@ export const companies: CompanyWithContact[] = [
       "Urlaubs & Weihnachtsgeld"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/pflegedienst-heitmann-poser.jpg"
   },
   {
     "id": "19",
@@ -729,7 +746,8 @@ export const companies: CompanyWithContact[] = [
       "Sonn- und Feiertagszuschläge, vollständige Berufsbekleidung, Übernahmegarantie bei guten Leistungen, Übernahme Kosten Bootsführerschein, günstige Mitarbeiter-Angelkarte, Mitarbeiterrabatte an allen Standorten, Zahlung nach Tarif"
     ],
     "schnuppertage": false,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/fischerei-mueritz-plau-gmbh.svg"
   },
   {
     "id": "20",
@@ -764,7 +782,8 @@ export const companies: CompanyWithContact[] = [
       "Übernahmegarantie (Azubis)"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/altenhilfezentrum-dr-wilde-haus-plau-am-see.webp"
   },
   {
     "id": "21",
@@ -803,7 +822,8 @@ export const companies: CompanyWithContact[] = [
       "Übernahme der Kosten für Arbeitsbekleidung"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/hawart-omv-landtechnik-gmbh.jpeg"
   },
   {
     "id": "22",
@@ -859,7 +879,8 @@ export const companies: CompanyWithContact[] = [
       "- Zuschuß zu Führerschein oder Mietzahlung möglich (AZUBIS)"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/metallbau-senkbeil-gmbh.avif"
   },
   {
     "id": "23",
@@ -911,7 +932,8 @@ export const companies: CompanyWithContact[] = [
       "4-Tage Woche, Bereit­stellung der Berufs­beklei­dung, Individu­elle Coa­chings, Förde­rung und beruf­liche Auf­stiegs­chancen, Inter­net­nut­zung, Mitarbeiter­events, Mit­arbeiter­handy, Mitarbeiter­rabatte, Moderne Betriebs­ausstattung, Parkplatz, steuer­freie Zusatz­leistungen, übertarifliche Bezahlung, Gutes Betriebsklima, Feste Arbeits­zeiten und die Ver­ein­bar­keit von Fami­lie und Beruf - Work-Life-Balance"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/luchs-haustechnik-gmbh.png"
   },
   {
     "id": "24",
@@ -984,7 +1006,8 @@ export const companies: CompanyWithContact[] = [
       "Tankgutscheine"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/technologik-metallsysteme-gmbh.png"
   },
   {
     "id": "25",
@@ -1029,7 +1052,8 @@ export const companies: CompanyWithContact[] = [
       "Übernahmegarantie (Azubis)"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/baeckerei-und-konditorei-behrens.jpeg"
   },
   {
     "id": "26",
@@ -1067,7 +1091,8 @@ export const companies: CompanyWithContact[] = [
       "Urlaubs & Weihnachtsgeld"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/leinerstift-erziehungsstellen.png"
   },
   {
     "id": "27",
@@ -1113,7 +1138,8 @@ export const companies: CompanyWithContact[] = [
       "Spannenden Job an jedem Tag"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/landespolizei-mecklenburg-vorpommern.jpg"
   },
   {
     "id": "29",
@@ -1173,7 +1199,8 @@ export const companies: CompanyWithContact[] = [
       "FRIES-Card"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/fries-gmbh.jpeg"
   },
   {
     "id": "30",
@@ -1224,7 +1251,8 @@ export const companies: CompanyWithContact[] = [
       "Jobrad (geplant)"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/volkssolidaritaet-kreisverband-parchim-e-v.png"
   },
   {
     "id": "31",
@@ -1257,7 +1285,8 @@ export const companies: CompanyWithContact[] = [
       "Kostenübernahme für Schule / Unterkunft / Fahrtwege"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/plauer-dachdecker-lublow-geruestbau.png"
   },
   {
     "id": "32",
@@ -1291,7 +1320,8 @@ export const companies: CompanyWithContact[] = [
       "Kostenlose Parkplätze, Vergünstigtes Essen in der Cafeteria, Kostenlose Nutzung der Schwimmhalle und des Fitnessraumes, Vermögenswirksame Leistungen"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/mediclin-kliniken-plau-am-see-gmbh-und-co-kg.svg"
   },
   {
     "id": "33",
@@ -1329,7 +1359,8 @@ export const companies: CompanyWithContact[] = [
       "- Teamevents und Betriebsausflüge"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/notar-dirk-tast.png"
   },
   {
     "id": "34",
@@ -1359,7 +1390,8 @@ export const companies: CompanyWithContact[] = [
       "Übernahmegarantie (Azubis)"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/falk-seehotels-gmbh-seehotel-plau-am-see.jpg"
   },
   {
     "id": "35",
@@ -1440,7 +1472,8 @@ export const companies: CompanyWithContact[] = [
       "Vergünstigte Übernachtungsmöglichkeiten im deutschsprachigen Raum/Perso Nights"
     ],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logo-beech-resorts.svg"
   },
   {
     "id": "37",
@@ -1468,6 +1501,7 @@ export const companies: CompanyWithContact[] = [
     ],
     "benefits": [],
     "schnuppertage": true,
-    "aktiv": true
+    "aktiv": true,
+    "logo": "/logos/parkhotel-klueschenberg.jpg"
   }
 ];
