@@ -104,6 +104,12 @@ export default function CompanyGrid({ companies }: { companies?: Company[] } = {
                     .map((a) => (
                       <JobBadge key={a} type={a} />
                     ))}
+                  {u.anstellungsarten.includes("Boys & Girlsday") && (
+                    <span className="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#F97E1A]/10 text-[#F97E1A] uppercase tracking-wider">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                      Boys &amp; Girlsday
+                    </span>
+                  )}
                 </div>
               </div>
             ))}
