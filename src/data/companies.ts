@@ -1331,7 +1331,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 38735 45536",
     "email": "corinna.tast@notar-tast.de",
-    "website": "https://www.notar-tast.de",
+    "website": "",
     "bewerbungslink": "",
     "ansprechpartner": "Corinna Tast",
     "anstellungsarten": [
@@ -1437,7 +1437,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 173 6740900",
     "email": "talente@five-e-group.com",
-    "website": "https://beech.de",
+    "website": "https://www.beechresort-plauer-see.com/",
     "bewerbungslink": "",
     "ansprechpartner": "Urszula Wycech",
     "anstellungsarten": [
