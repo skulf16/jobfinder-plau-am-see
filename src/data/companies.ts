@@ -13,7 +13,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 1522 3105755",
     "email": "info@volutus.de",
-    "website": "https://volutus.de",
+    "website": "",
     "bewerbungslink": "",
     "ansprechpartner": "Herr Kröcher",
     "anstellungsarten": [
@@ -46,7 +46,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 38735 8340",
     "email": "karin.rosenow@etl.de",
-    "website": "https://www.etl.de/steuerberatung/plau-am-see",
+    "website": "https://www.steuerberatung-plau.de/",
     "bewerbungslink": "",
     "ansprechpartner": "Karin Rosenow",
     "anstellungsarten": [
@@ -85,7 +85,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 173 2071659",
     "email": "buchhaltung@feddeler.com",
-    "website": "https://febe-bau.de",
+    "website": "http://www.febe-bau.com/",
     "bewerbungslink": "",
     "ansprechpartner": "Anne Feddeler",
     "anstellungsarten": [
@@ -117,7 +117,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 172 1619298",
     "email": "katharina.krause@proventus.de",
-    "website": "https://www.deutsche-proventus.de",
+    "website": "https://www.proventus.de/katharina-krause.html",
     "bewerbungslink": "",
     "ansprechpartner": "Katharina Krause",
     "anstellungsarten": [
@@ -171,7 +171,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 38735 41897",
     "email": "kita.plau@kloster-dobbertin.de",
-    "website": "https://www.zwergenparadies-plau.de",
+    "website": "https://kloster-dobbertin.de/unsere-einrichtungen/bildung-und-foerderung/kita-zwergenparadies-plau/",
     "bewerbungslink": "",
     "ansprechpartner": "Kirstin Laabs",
     "anstellungsarten": [],
@@ -189,7 +189,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 1520 2302788",
     "email": "info@bauservice-transporte-tschiersch-seehafer.de",
-    "website": "https://tschiersch-seehafer.de",
+    "website": "https://www.bauservice-transporte-tschiersch-seehafer.de/",
     "bewerbungslink": "",
     "ansprechpartner": "Sven Tschiersch-Seehafer",
     "anstellungsarten": [
@@ -225,7 +225,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 3871 7225607",
     "email": "haroyan@invest-swm.de",
-    "website": "https://www.wifoeg-swm.de",
+    "website": "https://www.invest-swm.de/",
     "bewerbungslink": "",
     "ansprechpartner": "Haroyan, Voskehat",
     "anstellungsarten": [],
@@ -243,7 +243,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 38735 492263",
     "email": "kitabuntestifte@ill-ev.de",
-    "website": "https://www.ill-ev.de",
+    "website": "https://ill-ev.de/kindertagesstaetten/landkreis-ludwigslust-parchim/kindertagesstaette-bunte-stifte/unsere-einrichtung",
     "bewerbungslink": "",
     "ansprechpartner": "Yvonne Kuhring",
     "anstellungsarten": [
@@ -310,7 +310,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 175 4043206",
     "email": "Bau.ahrens@mail.de",
-    "website": "https://bauunternehmen-ahrens.de",
+    "website": "",
     "bewerbungslink": "",
     "ansprechpartner": "Olaf Ahrens",
     "anstellungsarten": [
@@ -466,7 +466,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 1520 2979163",
     "email": "info@kuemo-lenk.de",
-    "website": "https://lenk-kuechendesign.de",
+    "website": "https://kuemo-lenk.de/",
     "bewerbungslink": "",
     "ansprechpartner": "Dürten Lenk",
     "anstellungsarten": [
@@ -546,7 +546,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 38735 81600",
     "email": "info@steuerberater-steinhaeuser.de",
-    "website": "https://www.steuerberater-steinhaeuser.de",
+    "website": "https://it-safety24.de/#start",
     "bewerbungslink": "",
     "ansprechpartner": "Steffen Steinhäuser",
     "anstellungsarten": [
@@ -637,7 +637,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 173 2190511",
     "email": "sp@ms-zeltbau.com",
-    "website": "https://ms-zeltbau.de",
+    "website": "https://ms-zeltbau.com/",
     "bewerbungslink": "",
     "ansprechpartner": "Stefanie Bartsch",
     "anstellungsarten": [
@@ -664,7 +664,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 172 2396348",
     "email": "info@pflegedienst-karow.de",
-    "website": "https://www.pflegedienst-heitmann-poser.de",
+    "website": "https://pflegedienst-karow.de/",
     "bewerbungslink": "",
     "ansprechpartner": "Claudia Poser",
     "anstellungsarten": [
@@ -697,7 +697,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 3991 153441",
     "email": "jklos@mueritzfischer.de",
-    "website": "https://mueritz-plau-fischerei.de",
+    "website": "https://www.mueritzfischer.de/jobs/",
     "bewerbungslink": "",
     "ansprechpartner": "Janine Klos",
     "anstellungsarten": [
@@ -757,7 +757,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 38735 8950",
     "email": "ahz.plau@kloster-dobbertin.de",
-    "website": "https://www.kloster-dobbertin.de",
+    "website": "https://kloster-dobbertin.de/",
     "bewerbungslink": "",
     "ansprechpartner": "Carmen Schuldt",
     "anstellungsarten": [
@@ -793,7 +793,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 38735 82216",
     "email": "klebe@hawartomv.de",
-    "website": "https://www.hawart-omv.de",
+    "website": "https://www.hawartomv.de/",
     "bewerbungslink": "",
     "ansprechpartner": "Christoph Frick",
     "anstellungsarten": [
