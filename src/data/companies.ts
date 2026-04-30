@@ -1017,7 +1017,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 173 1651753",
     "email": "behrensalx@aol.de",
-    "website": "https://baeckerei-behrens.de",
+    "website": "",
     "bewerbungslink": "",
     "ansprechpartner": "Hannes Behrens/ Heidi Schaumkessel",
     "anstellungsarten": [
@@ -1149,7 +1149,7 @@ export const companies: CompanyWithContact[] = [
     "adresse": "Plau am See",
     "telefon": "+49 38737 50463",
     "email": "a.schroeder@fries24.de",
-    "website": "https://www.fries.de",
+    "website": "https://www.fries24.de/Stellenangebote/",
     "bewerbungslink": "",
     "ansprechpartner": "Angie Schröder",
     "anstellungsarten": [
